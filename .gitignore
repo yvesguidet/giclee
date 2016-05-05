@@ -1,0 +1,6 @@
+*.sw?
+*.sauve
+*.baq
+trav.*
+*.pyc
+*.tdy
