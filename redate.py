@@ -3,17 +3,21 @@
 # alias finNomfic='newMap.pl'
 
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
-sem = '23'
-quantieme = 6
+
+sem = '24'
+quantieme = 16
+zap = 12
+
+
 sep = '_'	# mieux que '-' pour modif
 
 import os
 
-os.chdir('cartes')
+# os.chdir('cartes')
 
 from glob import glob
 
-fics = glob('*sem23*mm')
+fics = glob('*sem24*mm') # ne pas laisser en dur !!!
 
 print fics
 
@@ -30,6 +34,6 @@ for f in fics:
 	#	print "indiceBsoul = {}".format(indiceBsoul)
 	quantieme = finNomfic[:indiceBsoul]
 	#	print "quantieme = {}".format(quantieme)
-	k = "modident {} {} {}".format(4, quantieme, f)# ne pas laisser "4" en dur ;)
+	k = "modident {} {} {}".format(zap, quantieme, f)# ne pas laisser "zap" en dur ;)
 	print k
 	os.system(k)

@@ -1,9 +1,14 @@
 #!  /usr/bin/env python
+# -*- coding: utf-8 -*-
 # alias n='newMap.pl'
 
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
-sem = '23'
-quantieme = 6
+
+# à passer en arg
+
+sem = '24'
+quantieme = 13
+
 sep = '_'	# mieux que '-' pour modif
 
 import os
