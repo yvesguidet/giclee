@@ -5,10 +5,7 @@
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
 # à passer en arg
-
-sem = '26'
-quantiemeDuLundi = 27
-nbJMois = 30
+from params import *
 
 sep = '_'	# mieux que '-' pour modif
 
@@ -22,4 +19,4 @@ for j in l:
 	if quantiemeDuLundi > nbJMois:
 		quantiemeDuLundi = 1
 	print k
-	os.system(k)
+	#os.system(k)

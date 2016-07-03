@@ -4,9 +4,7 @@
 
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
-sem = '26'
-quantiemeDuLundi = 27
-quantieme2Day = 26
+from params import *
 
 
 sep = '_'	# mieux que '-' pour modif
