@@ -6,8 +6,9 @@ l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
 # à passer en arg
 
-sem = '24'
-quantieme = 13
+sem = '26'
+quantiemeDuLundi = 27
+nbJMois = 30
 
 sep = '_'	# mieux que '-' pour modif
 
@@ -16,9 +17,9 @@ import os
 for j in l:
 	#	util. str.format()
 	#	mettre un format
-	k = 'newMap.pl ' + j + str(quantieme) + '_sem' + sem
-	quantieme += 1
-	if quantieme > 31:
-		quantieme = 1
+	k = 'newMap.pl ' + j + str(quantiemeDuLundi) + '_sem' + sem
+	quantiemeDuLundi += 1
+	if quantiemeDuLundi > nbJMois:
+		quantiemeDuLundi = 1
 	print k
 	os.system(k)

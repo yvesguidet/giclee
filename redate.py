@@ -4,9 +4,9 @@
 
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
-sem = '24'
-quantieme = 16
-zap = 12
+sem = '26'
+quantiemeDuLundi = 27
+quantieme2Day = 26
 
 
 sep = '_'	# mieux que '-' pour modif
@@ -17,23 +17,17 @@ import os
 
 from glob import glob
 
-fics = glob('*sem24*mm') # ne pas laisser en dur !!!
+fics = glob('*sem' + sem + '*mm') # dimanche 19 juin 2016, 09:24:11 (UTC+0200)
 
 print fics
-
-for f in fics:
-	jour3car = f[0:3]
-	print jour3car
-	k = "modident {} {} {}".format("samedi", jour3car, f)
-	#	print k
 
 for f in fics:
 	finNomfic = f[3:]	# enlève 'lun', 'mar' ...
 	#	print "finNomfic = {}".format(finNomfic)
 	indiceBsoul = finNomfic.find('_')
 	#	print "indiceBsoul = {}".format(indiceBsoul)
-	quantieme = finNomfic[:indiceBsoul]
-	#	print "quantieme = {}".format(quantieme)
-	k = "modident {} {} {}".format(zap, quantieme, f)# ne pas laisser "zap" en dur ;)
+	quantiemeDuLundi = finNomfic[:indiceBsoul]
+	#	print "quantiemeDuLundi = {}".format(quantiemeDuLundi)
+	k = "modident {} {} {}".format(quantieme2Day, quantiemeDuLundi, f) # dimanche 19 juin 2016, 09:32:55 (UTC+0200)
 	print k
 	os.system(k)
