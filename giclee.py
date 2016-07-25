@@ -19,4 +19,4 @@ for j in l:
 	if quantiemeDuLundi > nbJMois:
 		quantiemeDuLundi = 1
 	print k
-	#os.system(k)
+	os.system(k)
