@@ -1,5 +1,5 @@
 
-sem = '32'
-quantiemeDuLundi = 8
+sem = '34'
+quantiemeDuLundi = 22
 nbJMois = 31
-quantieme2Day = 8
+quantieme2Day = 21
