@@ -7,7 +7,7 @@ l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 from params import *
 
 
-sep = '_'	# mieux que '-' pour modif
+oct = '_'	# mieux que '-' pour modif
 
 import os
 
