@@ -1,10 +1,9 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1462443364847" ID="ID_1106136207" MODIFIED="1462458156021" TEXT="plan gicl&#xe9;e">
-<node CREATED="1462458043580" ID="ID_890761760" LINK="/home/yves/2011/2016/printemps/info/mmZero/giclee/" MODIFIED="1462458493739" POSITION="left" TEXT="dir"/>
-<node CREATED="1462458562217" ID="ID_533803954" LINK="/home/yves/2011/2016/printemps/cartes/Ascension16.mm" MODIFIED="1462459481081" POSITION="right" TEXT="Ascension">
+<node CREATED="1462443364847" ID="ID_1106136207" MODIFIED="1475912083901" TEXT="gicl&#xe9;e">
+<node CREATED="1462458043580" ID="ID_890761760" LINK="/home/yves/2011/2016/automne/info/giclee/ygGetDate" MODIFIED="1475912017680" POSITION="left" TEXT="dir"/>
+<node CREATED="1475905167689" ID="ID_100484700" LINK="/home/yves/2011/2016/automne/cartes/Pelagie16.mm" MODIFIED="1475912069385" POSITION="right" TEXT="samedi 8 octobre 2016, 01:33:26 (UTC+0200)&#xa;">
 <cloud/>
 </node>
-<node CREATED="1462459304622" ID="ID_682719383" LINK="zisse2016/zisse2016.mm" MODIFIED="1462459304624" POSITION="right" TEXT="(get)zisse2016"/>
 </node>
 </map>
