@@ -1,4 +1,4 @@
 #! /bin/bash
-k="rsync -utvvn [^g]*.mm cartes/"
+k="rsync -utvln [^n]*.mm cartes/"
 echo $k
 eval $k
