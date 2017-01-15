@@ -12,7 +12,9 @@ quantieme2Day = str.split(d)[1]
 print "quantieme2Day = {}".format(quantieme2Day)
 mois = str.split(d)[2]
 
-nbJours = {'novembre': 30, 'décembre' : 31} # compléter ;)
+nbJours = {	'novembre': 30,
+			'décembre' : 31,
+			'janvier' : 31}	# compléter ;)
 
 print "nbJours = {}".format(nbJours)
 
@@ -29,6 +31,10 @@ print "semCour = {}".format(semCour)
 print "type(semCour) = {}".format(type(semCour))
 
 semCour += 1
+
+# dimanche 1 janvier 2017, 09:45:32 (UTC+0100)
+if semCour == 53:
+	semCour = 1
 
 print "mois = {}".format(mois)
 nbJMois = nbJours[mois]
