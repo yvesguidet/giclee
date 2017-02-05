@@ -49,3 +49,7 @@ sem = '5'
 quantieme2Day = 29
 nbJMois = 31
 quantiemeDuLundi = 30
+sem = '6'
+quantieme2Day = 5
+nbJMois = 28
+quantiemeDuLundi = 6

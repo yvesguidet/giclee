@@ -14,7 +14,8 @@ mois = str.split(d)[2]
 
 nbJours = {	'novembre': 30,
 			'décembre' : 31,
-			'janvier' : 31}	# compléter ;)
+			'janvier' : 31,
+			'février' : 28}	# compléter ;) # patch prévu pour 2020 ^^
 
 print "nbJours = {}".format(nbJours)
 
