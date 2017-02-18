@@ -53,3 +53,7 @@ sem = '6'
 quantieme2Day = 5
 nbJMois = 28
 quantiemeDuLundi = 6
+sem = '7'
+quantieme2Day = 12
+nbJMois = 28
+quantiemeDuLundi = 13
