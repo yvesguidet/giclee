@@ -22,9 +22,9 @@ print fics
 for f in fics:
 	finNomfic = f[3:]	# enlève 'lun', 'mar' ...
 	#	print "finNomfic = {}".format(finNomfic)
-	indiceBsoul = finNomfic.find('_')
-	#	print "indiceBsoul = {}".format(indiceBsoul)
-	quantiemeDuLundi = finNomfic[:indiceBsoul]
+	indiceBlancSouligne = finNomfic.find('_')
+	#	print "indiceBlancSouligne = {}".format(indiceBlancSouligne)
+	quantiemeDuLundi = finNomfic[:indiceBlancSouligne]
 	#	print "quantiemeDuLundi = {}".format(quantiemeDuLundi)
 	k = "modident {} {} {}".format(quantieme2Day, quantiemeDuLundi, f) # dimanche 19 juin 2016, 09:32:55 (UTC+0200)
 	print k

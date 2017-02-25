@@ -49,7 +49,14 @@ print "finir"
 print >>params, "sem = '{}'".format(semCour)
 print >>params, "quantieme2Day = {}".format(quantieme2Day)
 print >>params, "nbJMois = {}".format(nbJMois)
-quantiemeDuLundi = int(quantieme2Day) + 1 # grosse triche
+
+from jourSem import jourSem, nbJoursDIciLundi
+
+jourS = jourSem()
+print "jourS = {}".format(jourS)
+#	assert(jourS == 'dim')
+
+quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
 print >>params, "quantiemeDuLundi = {}".format(quantiemeDuLundi)
 
 print "Et voilou"
