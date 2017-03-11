@@ -51,7 +51,8 @@ print "nbJMois = {}".format(nbJMois)
 
 print "écriture de quantieme2Day = {} dans params.py".format(quantieme2Day)
 print "écriture de nbJMois = {} dans params.py".format(nbJMois)
-params = open('params.py', "w")
+# samedi 11 mars 2017, 09:31:20 (UTC+0100)
+params = open('/home/yves/2011/2017/hiver/info/Python/outils/giclee/jourSem/giclee/params.py', "w")
 
 from jourSem import jourSem, nbJoursDIciLundi
 
