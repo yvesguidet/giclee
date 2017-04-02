@@ -9,5 +9,9 @@
 <node CREATED="1485148972551" ID="ID_346616266" MODIFIED="1485675411979" POSITION="left" TEXT="automatiser. no sem ds  menaj.sh">
 <node CREATED="1485674202975" ID="ID_1672895197" MODIFIED="1485674206493" TEXT="/home/yves/2011/2016/automne/pyVernon/support/complementsMureaux/DavP.py"/>
 </node>
+<node CREATED="1489215331817" ID="ID_633467159" MODIFIED="1489221672075" POSITION="right" TEXT="upgrade">
+<icon BUILTIN="full-1"/>
+<node CREATED="1489215331819" ID="ID_1158692703" MODIFIED="1489221677810" TEXT="redate"/>
+</node>
 </node>
 </map>

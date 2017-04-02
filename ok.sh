@@ -1,4 +1,5 @@
 #! /bin/bash
-k="rsync -utvl [^n]*.mm cartes/"
+non=
+k="rsync $non -utvl [^g]*.mm cartes/"
 
 eval $k
