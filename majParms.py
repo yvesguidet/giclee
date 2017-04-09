@@ -16,7 +16,8 @@ nbJours = {	'novembre': 30,
 			'décembre' : 31,
 			'janvier' : 31,
 			'février' : 28, # patch prévu pour 2020 ^^
-			'mars' : 31}	# compléter ;) 
+			'mars' : 31,
+			'avril' : 30}	# compléter ;)
 
 print "nbJours = {}".format(nbJours)
 
@@ -52,7 +53,7 @@ print "nbJMois = {}".format(nbJMois)
 print "écriture de quantieme2Day = {} dans params.py".format(quantieme2Day)
 print "écriture de nbJMois = {} dans params.py".format(nbJMois)
 # samedi 11 mars 2017, 09:31:20 (UTC+0100)
-params = open('/home/yves/2011/2017/hiver/info/Python/outils/giclee/jourSem/giclee/params.py', "w")
+params = open('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/params.py', "w")
 
 from jourSem import jourSem, nbJoursDIciLundi
 
