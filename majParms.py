@@ -21,6 +21,7 @@ nbJours = {	'novembre': 30,
 
 print "nbJours = {}".format(nbJours)
 
+path.append('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/semCour')
 from semCour import semCour
 
 semCour = semCour()
@@ -55,6 +56,8 @@ print "écriture de nbJMois = {} dans params.py".format(nbJMois)
 # samedi 11 mars 2017, 09:31:20 (UTC+0100)
 params = open('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/params.py', "w")
 
+
+path.append('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/jourSem')
 from jourSem import jourSem, nbJoursDIciLundi
 
 jourS = jourSem()
