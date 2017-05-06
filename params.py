@@ -1,4 +1,4 @@
-quantiemeDuLundi = 3
-sem = '14'
-quantieme2Day = 2
+quantiemeDuLundi = 17
+sem = '15'
+quantieme2Day = 16
 nbJMois = 30
