@@ -17,7 +17,8 @@ nbJours = {	'novembre': 30,
 			'janvier' : 31,
 			'février' : 28, # patch prévu pour 2020 ^^
 			'mars' : 31,
-			'avril' : 30}	# compléter ;)
+			'avril' : 30,
+			'mai' : 31}	# compléter ;)
 
 print "nbJours = {}".format(nbJours)
 
