@@ -39,9 +39,10 @@ print "après nettoyage début : semCour = {}".format(semCour)
 semCour = semCour[:2]
 print "après nettoyage fin : semCour = {}".format(semCour)
 
+# dimanche 28 mai 2017, 09:04:03 (UTC+0200)
 semCour = int(semCour)
 
-semCour += 1
+# semCour += 1
 
 # dimanche 1 janvier 2017, 09:45:32 (UTC+0100)
 if semCour == 53:
