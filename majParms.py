@@ -19,20 +19,19 @@ nbJours = {	'novembre': 30,
 			'mars' : 31,
 			'avril' : 30,
 			'mai' : 31,
-			'juin' : 30}	# compléter ;)
+			'juin' : 30,
+			'juillet' : 31,
+			'août' : 31}	# compléter ;)
 
 print "nbJours = {}".format(nbJours)
 
-path.append('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/semCour')
+# mardi 25 juillet 2017, 08:28:50 (UTC+0200)
+path.append('/home/yves/2011/dev/Python/outils/semCour')
 from semCour import semCour
 
 semCour = semCour()
 
 print "semCour = {}".format(semCour)
-print "type(semCour) = {}".format(type(semCour))
-
-print "semCour = {}".format(semCour)
-print "type(semCour) = {}".format(type(semCour))
 
 semCour = semCour[3:]
 print "après nettoyage début : semCour = {}".format(semCour)
@@ -43,7 +42,10 @@ print "après nettoyage fin : semCour = {}".format(semCour)
 # dimanche 28 mai 2017, 09:04:03 (UTC+0200)
 semCour = int(semCour)
 
-# semCour += 1
+# dimanche 23 juillet 2017, 10:56:53 (UTC+0200)
+# 	non !
+
+# semCour += 1	# oui ou non ?
 
 # dimanche 1 janvier 2017, 09:45:32 (UTC+0100)
 if semCour == 53:
@@ -57,7 +59,10 @@ print "nbJMois = {}".format(nbJMois)
 print "écriture de quantieme2Day = {} dans params.py".format(quantieme2Day)
 print "écriture de nbJMois = {} dans params.py".format(nbJMois)
 # samedi 11 mars 2017, 09:31:20 (UTC+0100)
-params = open('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/params.py', "w")
+#	params = open('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/params.py', "w")
+
+# dimanche 9 juillet 2017, 10:11:06 (UTC+0200)
+params = open('/home/yves/2011/dev/Python/outils/giclee/params.py', "w")
 
 
 path.append('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/jourSem')
