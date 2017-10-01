@@ -22,7 +22,8 @@ nbJours = {	'novembre': 30,
 			'juin' : 30,
 			'juillet' : 31,
 			'août' : 31,
-			'septembre' : 30}	# compléter ;)
+			'septembre' : 30,
+			'octobre' : 31}	# compléter ;)
 
 print "nbJours = {}".format(nbJours)
 
