@@ -51,7 +51,9 @@ semCour = int(semCour)
 #	si ?
 # dimanche 15 octobre 2017, 09:46:35 (UTC+0200)
 # 	non !
-#	semCour += 1	# oui ou non ?
+# provi
+#	jeudi 19 octobre 2017, 10:30:15 (UTC+0200)
+semCour += 1	# oui ou non ?
 
 # dimanche 1 janvier 2017, 09:45:32 (UTC+0100)
 if semCour == 53:
