@@ -28,6 +28,10 @@ print k
 os.system(k)
 
 # on se déplace sur le répertoire essai
+# vendredi 20 octobre 2017, 09:11:55 (UTC+0200)
+# après avoir planqué le répertoire courant
+
+ici= os.getcwd()
 os.chdir(dirtest)
 
 for j in l:
@@ -41,7 +45,7 @@ for j in l:
 	os.system(k)
 
 # on revient
-os.chdir('..')	# pas joli
+os.chdir(ici)
 
 k = './try.sh'
 print k
