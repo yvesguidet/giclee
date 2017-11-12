@@ -23,7 +23,8 @@ nbJours = {	'novembre': 30,
 			'juillet' : 31,
 			'août' : 31,
 			'septembre' : 30,
-			'octobre' : 31}	# compléter ;)
+			'octobre' : 31,
+			'novembre' : 30}	# compléter ;)
 
 print "nbJours = {}".format(nbJours)
 
@@ -35,14 +36,16 @@ semCour = semCour()
 
 print "semCour = {}".format(semCour)
 
-semCour = semCour[3:]
-print "après nettoyage début : semCour = {}".format(semCour)
+# dimanche 12 novembre 2017, 11:06:37 (UTC+0100)
 
-semCour = semCour[:2]
-print "après nettoyage fin : semCour = {}".format(semCour)
+#	semCour = semCour[3:]
+#	print "après nettoyage début : semCour = {}".format(semCour)
+
+#	semCour = semCour[:2]
+#	print "après nettoyage fin : semCour = {}".format(semCour)
 
 # dimanche 28 mai 2017, 09:04:03 (UTC+0200)
-semCour = int(semCour)
+#	semCour = int(semCour)
 
 # dimanche 23 juillet 2017, 10:56:53 (UTC+0200)
 # 	non !
