@@ -37,7 +37,7 @@ os.chdir(dirtest)
 for j in l:
 	#	util. str.format()
 	#	mettre un format
-	k = 'newMap.pl ' + j + str(params.quantiemeDuLundi) + '_sem' + params.sem
+	k = 'newMap.py ' + j + str(params.quantiemeDuLundi) + '_sem' + params.sem
 	params.quantiemeDuLundi += 1
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
