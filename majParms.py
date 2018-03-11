@@ -1,8 +1,6 @@
 #!  /usr/bin/env python
 # -*- coding: utf-8 -*-
 from sys import path
-path.append('/home/yves/2011/2016/automne/rentree/pymmPremCrochet')
-from FinProvisoire import FinProvisoire
 import ygGetDate
 #	date|awk '{print $2}'
 d = ygGetDate.laDate()
@@ -84,6 +82,12 @@ print "jourS = {}".format(jourS)
 #	assert(jourS == 'dim')
 
 quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
+print "quantiemeDuLundi = {}".format(quantiemeDuLundi)
+# dimanche 31 décembre 2017, 08:37:48 (UTC+0100)
+if quantiemeDuLundi == 32:
+	quantiemeDuLundi = 1	# affreux
+assert(quantiemeDuLundi <= 31)
+
 print >>params, "quantiemeDuLundi = {}".format(quantiemeDuLundi)
 #	print "finir"
 print >>params, "sem = '{}'".format(semCour)
