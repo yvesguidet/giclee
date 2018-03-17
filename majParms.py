@@ -3,8 +3,6 @@
 from sys import path
 import ygGetDate
 #	date|awk '{print $2}'
-d = ygGetDate.laDate()
-print "d = {}".format(d)
 
 import time
 
