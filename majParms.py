@@ -6,9 +6,24 @@ import ygGetDate
 d = ygGetDate.laDate()
 print "d = {}".format(d)
 
-quantieme2Day = str.split(d)[1]
+import time
+
+import locale
+
+locale.setlocale(locale.LC_ALL, ('fr', 'utf-8'))
+
+dd = time.asctime()
+print "dd = {}".format(dd)
+
+quantieme2Day = str.split(dd)[2]
+
 print "quantieme2Day = {}".format(quantieme2Day)
-mois = str.split(d)[2]
+mois = str.split(dd)[1]
+print "mois = {}".format(mois)
+assert mois == 'Mar'
+bof = {'Mar' : 'mars'}
+mois = bof[mois]
+print "mois = {}".format(mois)
 
 nbJours = {	'novembre': 30,
 			'décembre' : 31,
@@ -27,12 +42,15 @@ nbJours = {	'novembre': 30,
 print "nbJours = {}".format(nbJours)
 
 # mardi 25 juillet 2017, 08:28:50 (UTC+0200)
-path.append('/home/yves/2011/dev/Python/outils/semCour')
-from semCour import semCour
+#	path.append('/home/yves/2011/dev/Python/outils/semCour')
+#	from semCour import semCour
 
-semCour = semCour()
+import datetime
+
+semCour = datetime.date.today().isocalendar()[1]
 
 print "semCour = {}".format(semCour)
+assert 0, 'OK ?' # NAN
 
 # dimanche 12 novembre 2017, 11:06:37 (UTC+0100)
 
