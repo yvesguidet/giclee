@@ -19,8 +19,8 @@ print "quantieme2Day = {}".format(quantieme2Day)
 mois = str.split(dd)[1]
 print "mois = {}".format(mois)
 assert mois == 'Mar'
-bof = {'Mar' : 'mars'}
-mois = bof[mois]
+moisFrancais = {'Mar' : 'mars'}
+mois = moisFrancais[mois]
 print "mois = {}".format(mois)
 
 nbJours = {	'novembre': 30,
