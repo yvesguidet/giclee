@@ -50,7 +50,6 @@ import datetime
 semCour = datetime.date.today().isocalendar()[1]
 
 print "semCour = {}".format(semCour)
-assert 0, 'OK ?' # NAN
 
 # dimanche 12 novembre 2017, 11:06:37 (UTC+0100)
 
