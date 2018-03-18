@@ -10,7 +10,8 @@ import os
 
 k = './majParms.py'
 print k
-os.system(k)
+import majParms
+majParms.majParms()
 
 import params
 
@@ -18,6 +19,9 @@ oct = '_'	# mieux que '-' pour modif
 # lundi 16 octobre 2017, 09:45:42 (UTC+0200)
 
 dirtest = 'essai'
+
+k = 'rm -rf {}'.format(dirtest)
+print k
 
 import shutil
 shutil.rmtree('essai', ignore_errors=True)
