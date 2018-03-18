@@ -25,9 +25,8 @@ print k
 import shutil
 shutil.rmtree('essai', ignore_errors=True)
 
-k = 'mkdir -p {}'.format(dirtest)
-print k
-os.system(k)
+os.mkdir(dirtest)
+assert 0, 'good?'
 
 # on se déplace sur le répertoire essai
 # vendredi 20 octobre 2017, 09:11:55 (UTC+0200)
