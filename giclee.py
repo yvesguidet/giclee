@@ -21,7 +21,9 @@ dirtest = 'essai'
 
 k = 'rm -rf {}'.format(dirtest)
 print k
-os.system(k)
+
+import shutil
+shutil.rmtree('essai', ignore_errors=True)
 
 k = 'mkdir -p {}'.format(dirtest)
 print k
