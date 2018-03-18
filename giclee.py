@@ -19,14 +19,10 @@ oct = '_'	# mieux que '-' pour modif
 
 dirtest = 'essai'
 
-k = 'rm -rf {}'.format(dirtest)
-print k
-
 import shutil
 shutil.rmtree('essai', ignore_errors=True)
 
 os.mkdir(dirtest)
-assert 0, 'good?'
 
 # on se déplace sur le répertoire essai
 # vendredi 20 octobre 2017, 09:11:55 (UTC+0200)
@@ -38,12 +34,18 @@ os.chdir(dirtest)
 for j in l:
 	#	util. str.format()
 	#	mettre un format
-	k = 'newMap.py ' + j + str(params.quantiemeDuLundi) + '_sem' + params.sem
+	carteACreer = j + str(params.quantiemeDuLundi) + '_sem' + params.sem
+
+	k = 'newMap.py ' + carteACreer
 	params.quantiemeDuLundi += 1
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
 	print k
-	os.system(k)
+	from sys import path
+	path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/giclee/pyNewMap')
+	import newMap
+
+	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
 # on revient
 os.chdir(ici)
