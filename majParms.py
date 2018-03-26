@@ -11,18 +11,15 @@ import locale
 locale.setlocale(locale.LC_ALL, ('fr', 'utf-8'))
 
 def majParms():
-	dd = time.asctime()
-	print "dd = {}".format(dd)
+	ati = time.asctime()
 
-	quantieme2Day = str.split(dd)[2]
+	quantieme2Day = str.split(ati)[2]
 
-	print "quantieme2Day = {}".format(quantieme2Day)
-	mois = str.split(dd)[1]
-	print "mois = {}".format(mois)
+	mois = str.split(ati)[1]
+
 	assert mois == 'Mar'
 	moisFrancais = {'Mar' : 'mars'}
 	mois = moisFrancais[mois]
-	print "mois = {}".format(mois)
 
 	nbJours = {	'novembre': 30,
 				'décembre' : 31,
@@ -38,8 +35,6 @@ def majParms():
 				'octobre' : 31,
 				'novembre' : 30}	# compléter ;)
 
-	print "nbJours = {}".format(nbJours)
-
 	# mardi 25 juillet 2017, 08:28:50 (UTC+0200)
 	#	path.append('/home/yves/2011/dev/Python/outils/semCour')
 	#	from semCour import semCour
@@ -48,15 +43,7 @@ def majParms():
 
 	semCour = datetime.date.today().isocalendar()[1]
 
-	print "semCour = {}".format(semCour)
-
 	# dimanche 12 novembre 2017, 11:06:37 (UTC+0100)
-
-	#	semCour = semCour[3:]
-	#	print "après nettoyage début : semCour = {}".format(semCour)
-
-	#	semCour = semCour[:2]
-	#	print "après nettoyage fin : semCour = {}".format(semCour)
 
 	# dimanche 28 mai 2017, 09:04:03 (UTC+0200)
 	#	semCour = int(semCour)
@@ -76,13 +63,8 @@ def majParms():
 	if semCour == 53:
 		semCour = 1
 
-	print "mois = {}".format(mois)
 	nbJMois = nbJours[mois]
 
-	print "nbJMois = {}".format(nbJMois)
-
-	print "écriture de quantieme2Day = {} dans params.py".format(quantieme2Day)
-	print "écriture de nbJMois = {} dans params.py".format(nbJMois)
 	# samedi 11 mars 2017, 09:31:20 (UTC+0100)
 	#	params = open('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/params.py', "w")
 
@@ -90,28 +72,31 @@ def majParms():
 	params = open('/home/yves/2011/dev/Python/outils/giclee/params.py', "w")
 
 
-	path.append('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/jourSem')
+	path.append('/home/yves/2011/dev/Python/outils/jourSem')
 	from jourSem import jourSem, nbJoursDIciLundi
 
 	jourS = jourSem()
-	print "jourS = {}".format(jourS)
-	#	assert(jourS == 'dim')
 
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
-	print "quantiemeDuLundi = {}".format(quantiemeDuLundi)
+
 	# dimanche 31 décembre 2017, 08:37:48 (UTC+0100)
 	if quantiemeDuLundi == 32:
 		quantiemeDuLundi = 1	# affreux
-	assert(quantiemeDuLundi <= 31)
+	#	assert(quantiemeDuLundi <= 31)
+
+	if semCour == 14:	# horrible patch
+		quantiemeDuLundi = 2
+		print  "quantiemeDuLundi = {}".format(quantiemeDuLundi)
+		print  "sem = '{}'".format(semCour)
+		print  "quantieme2Day = {}".format(quantieme2Day)
+		print  "nbJMois = {}".format(nbJMois)
 
 	print >>params, "quantiemeDuLundi = {}".format(quantiemeDuLundi)
-	#	print "finir"
 	print >>params, "sem = '{}'".format(semCour)
 	print >>params, "quantieme2Day = {}".format(quantieme2Day)
 	print >>params, "nbJMois = {}".format(nbJMois)
 
 	params.close()
-	print "Et voilou"
 
 if  __name__ == '__main__':
 	assert 0, 'later'
