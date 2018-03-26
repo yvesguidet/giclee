@@ -85,10 +85,13 @@ def majParms():
 	#	assert(quantiemeDuLundi <= 31)
 
 	if semCour == 14:	# horrible patch
-		quantiemeDuLundi = 2
+		quantiemeDuLundi = 26
 		print  "quantiemeDuLundi = {}".format(quantiemeDuLundi)
+		semCour -= 1
 		print  "sem = '{}'".format(semCour)
 		print  "quantieme2Day = {}".format(quantieme2Day)
+		print  "type(quantieme2Day) = {}".format(type(quantieme2Day))
+		quantieme2Day = '25'
 		print  "nbJMois = {}".format(nbJMois)
 
 	print >>params, "quantiemeDuLundi = {}".format(quantiemeDuLundi)
