@@ -3,11 +3,11 @@
 
 #	à traduire en Python
 # cf /home/yves/2011/2014/automne/AEUG14/Sal12automne/backTicks.py
-import commands 
+import commands
 
 def laDate():
 	dothis = "date"
-	temp = commands.getoutput(dothis)  
+	temp = commands.getoutput(dothis)
 	return temp
 
 #	print laDate()
