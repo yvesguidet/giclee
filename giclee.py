@@ -8,8 +8,6 @@ l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
 import os
 
-k = './majParms.py'
-print k
 import majParms
 majParms.majParms()
 
@@ -19,9 +17,6 @@ oct = '_'	# mieux que '-' pour modif
 # lundi 16 octobre 2017, 09:45:42 (UTC+0200)
 
 dirtest = 'essai'
-
-k = 'rm -rf {}'.format(dirtest)
-print k
 
 import shutil
 shutil.rmtree('essai', ignore_errors=True)
@@ -36,15 +31,14 @@ ici= os.getcwd()
 os.chdir(dirtest)
 
 for j in l:
+	print 'blouk : j = {}'.format(j)
 	#	util. str.format()
 	#	mettre un format
 	carteACreer = j + str(params.quantiemeDuLundi) + '_sem' + params.sem
 
-	k = 'newMap.py ' + carteACreer
 	params.quantiemeDuLundi += 1
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
-	print k
 	from sys import path
 	path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/giclee/pyNewMap')
 	import newMap
@@ -55,5 +49,4 @@ for j in l:
 os.chdir(ici)
 
 k = './try.sh'
-print k
 os.system(k)
