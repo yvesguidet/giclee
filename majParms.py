@@ -103,12 +103,14 @@ def majParms():
 #		quantieme2Day = '25'
 #		print  "nbJMois = {}".format(nbJMois)
 
-	print >>params, "quantiemeDuLundi = {}".format(quantiemeDuLundi)
+	print "quantiemeDuLundi = {}".format(quantiemeDuLundi)
 	print >>params, "sem = '{}'".format(semCour)
 	print >>params, "quantieme2Day = {}".format(quantieme2Day)
 	print >>params, "nbJMois = {}".format(nbJMois)
 
 	params.close()
+	if bavard:
+		print "quantiemeDuLundi = {}".format(quantiemeDuLundi)
 
 if  __name__ == '__main__':
 	assert 0, 'later'
