@@ -1,5 +1,8 @@
 #!  /usr/bin/env python
 # -*- coding: utf-8 -*-
+
+bavard = True
+
 from sys import path
 import ygGetDate
 #	date|awk '{print $2}'
@@ -17,8 +20,9 @@ def majParms():
 
 	mois = str.split(ati)[1]
 
-	assert mois == 'Mar'
-	moisFrancais = {'Mar' : 'mars'}
+	#	assert mois == 'Mar'
+	moisFrancais = {'Mar' : 'mars',
+					'Apr' : 'avril'}
 	mois = moisFrancais[mois]
 
 	nbJours = {	'novembre': 30,
@@ -42,6 +46,8 @@ def majParms():
 	import datetime
 
 	semCour = datetime.date.today().isocalendar()[1]
+	if bavard:
+		assert 0
 
 	# dimanche 12 novembre 2017, 11:06:37 (UTC+0100)
 
