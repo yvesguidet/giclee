@@ -46,8 +46,6 @@ def majParms():
 	import datetime
 
 	semCour = datetime.date.today().isocalendar()[1]
-	if bavard:
-		assert 0
 
 	# dimanche 12 novembre 2017, 11:06:37 (UTC+0100)
 
@@ -84,6 +82,9 @@ def majParms():
 	jourS = jourSem()
 
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
+
+	if bavard:
+		assert 0, 'quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 
 	# dimanche 31 décembre 2017, 08:37:48 (UTC+0100)
 	if quantiemeDuLundi == 32:
