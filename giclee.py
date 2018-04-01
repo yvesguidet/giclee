@@ -34,8 +34,22 @@ for j in l:
 	print 'blouk : j = {}'.format(j)
 	#	util. str.format()
 	#	mettre un format
+
+	from sys import path
+
+	path.append('/home/yves/2011/dev/Python/outils/jourSem')
+	from jourSem import jourSem, nbJoursDIciLundi
+	import time
+	ati = time.asctime()
+
+	quantieme2Day = str.split(ati)[2]
+	assert 0, 'giclee.py : quantieme2Day = {}'.format(quantieme2Day)
+	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
 	carteACreer = j + str(params.quantiemeDuLundi) + '_sem' + params.sem
 
+	print 'giclee : params.params.quantieme2day = {}'.format(params.params.quantieme2day)
+	
+	assert params.quantiemeDuLundi == 2
 	params.quantiemeDuLundi += 1
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
