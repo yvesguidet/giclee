@@ -82,24 +82,26 @@ def majParms():
 	jourS = jourSem()
 
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
+	print 'majParms.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 
 	if bavard:
-		assert 0, 'quantiemeDuLundi = {}'.format(quantiemeDuLundi)
+		print 'majParms.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
+		assert quantiemeDuLundi == 2 #	pwovi ^^
 
 	# dimanche 31 décembre 2017, 08:37:48 (UTC+0100)
 	if quantiemeDuLundi == 32:
 		quantiemeDuLundi = 1	# affreux
 	#	assert(quantiemeDuLundi <= 31)
 
-	if semCour == 14:	# horrible patch
-		quantiemeDuLundi = 26
-		print  "quantiemeDuLundi = {}".format(quantiemeDuLundi)
-		semCour -= 1
-		print  "sem = '{}'".format(semCour)
-		print  "quantieme2Day = {}".format(quantieme2Day)
-		print  "type(quantieme2Day) = {}".format(type(quantieme2Day))
-		quantieme2Day = '25'
-		print  "nbJMois = {}".format(nbJMois)
+#	if semCour == 14:	# horrible patch
+#		assert 0, 'horrible patch'
+#		quantiemeDuLundi = 26
+#		print  "quantiemeDuLundi = {}".format(quantiemeDuLundi)
+#		semCour -= 1
+#		print  "sem = '{}'".format(semCour)
+#		print  "quantieme2Day = {}".format(quantieme2Day)
+#		quantieme2Day = '25'
+#		print  "nbJMois = {}".format(nbJMois)
 
 	print >>params, "quantiemeDuLundi = {}".format(quantiemeDuLundi)
 	print >>params, "sem = '{}'".format(semCour)
