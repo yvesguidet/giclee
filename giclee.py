@@ -44,8 +44,8 @@ for j in l:
 
 	quantieme2Day = str.split(ati)[2]
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
-	assert 0, 'giclee.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
-	carteACreer = j + str(params.quantiemeDuLundi) + '_sem' + params.sem
+	carteACreer = j + str(quantiemeDuLundi) + '_sem' + params.sem
+	assert 0, 'giclee.py : carteACreer = {}'.format(carteACreer)
 
 	print 'giclee : params.params.quantieme2day = {}'.format(params.params.quantieme2day)
 	
