@@ -47,9 +47,8 @@ for j in l:
 	carteACreer = j + str(quantiemeDuLundi) + '_sem' + params.sem
 	#	assert 0, 'giclee.py : carteACreer = {}'.format(carteACreer)
 
-	assert quantiemeDuLundi == 2
+	#	assert quantiemeDuLundi == 2
 	
-	assert 0
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
 	from sys import path
