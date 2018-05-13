@@ -52,7 +52,12 @@ for (increment, jour3lettres) in enumerate (l):
 	if debourre:
 		print 'blouk : increment = {}'.format(increment)
 		print 'blouk : type(increment) = {}'.format(type(increment))
-	carteACreer = str(increment + quantiemeDuLundi) + '_sem' + params.sem
+		print 'blouk : jour3lettres = {}'.format(jour3lettres)
+		print 'blouk : params.sem = {}'.format(params.sem)
+	# carteACreer = str(increment + quantiemeDuLundi) + '_sem' + params.sem
+		carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
+		print 'blouk : carteACreer = {}'.format(carteACreer)
+		assert 0
 
 	if increment != 'lun' and debourre:
 		print 'giclee : increment = {}'.format(increment)
