@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # alias n='newMap.pl'
 
+debourre = True # prévoir option -d
+
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
 # à passer en arg
@@ -45,10 +47,11 @@ for j in l:
 	quantieme2Day = str.split(ati)[2]
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
 	carteACreer = j + str(quantiemeDuLundi) + '_sem' + params.sem
-	#	assert 0, 'giclee.py : carteACreer = {}'.format(carteACreer)
 
-	#	assert quantiemeDuLundi == 2
-	
+	if j != 'lun' and debourre:
+		print 'giclee : j = {}'.format(j)
+		assert 0, 'giclee.py : carteACreer = {}'.format(carteACreer)
+
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
 	from sys import path
