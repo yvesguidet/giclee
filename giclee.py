@@ -32,8 +32,11 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-for j in l:
-	print 'blouk : j = {}'.format(j)
+for (increment, jour3lettres) in enumerate (l):
+	if debourre:
+		print 'blouk : increment = {}'.format(increment)
+		print 'blouk : jour3lettres = {}'.format(jour3lettres)
+
 	#	util. str.format()
 	#	mettre un format
 
@@ -46,10 +49,13 @@ for j in l:
 
 	quantieme2Day = str.split(ati)[2]
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
-	carteACreer = j + str(quantiemeDuLundi) + '_sem' + params.sem
+	if debourre:
+		print 'blouk : increment = {}'.format(increment)
+		print 'blouk : type(increment) = {}'.format(type(increment))
+	carteACreer = str(increment) + str(quantiemeDuLundi) + '_sem' + params.sem
 
-	if j != 'lun' and debourre:
-		print 'giclee : j = {}'.format(j)
+	if increment != 'lun' and debourre:
+		print 'giclee : increment = {}'.format(increment)
 		assert 0, 'giclee.py : carteACreer = {}'.format(carteACreer)
 
 	if params.quantiemeDuLundi > params.nbJMois:
