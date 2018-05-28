@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # alias n='newMap.pl'
 
-debourre = True # prévoir option -d
+debourre = False # prévoir option -d
 
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
@@ -58,7 +58,9 @@ for (increment, jour3lettres) in enumerate (l):
 		#	print 'blouk : jour3lettres = {}'.format(jour3lettres)
 		print 'blouk : nbJMois = {}'.format(nbJMois)
 		#	print 'blouk : params.sem = {}'.format(params.sem)
-	assert quantiemeDuLundi <= nbJMois
+	if quantiemeDuLundi > nbJMois:
+		quantiemeDuLundi -= nbJMois
+
 	# carteACreer = str(increment + quantiemeDuLundi) + '_sem' + params.sem
 	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
 	print 'blouk : carteACreer = {}'.format(carteACreer)
