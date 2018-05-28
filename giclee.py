@@ -49,13 +49,16 @@ for (increment, jour3lettres) in enumerate (l):
 
 	quantieme2Day = str.split(ati)[2]
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
-	assert quantiemeDuLundi <= 31
+
+	nbJMois = params.nbJMois
 	if debourre:
-		print 'blouk : increment = {}'.format(increment)
+		#	print 'blouk : increment = {}'.format(increment)
 		print 'blouk : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
-		print 'blouk : type(increment) = {}'.format(type(increment))
-		print 'blouk : jour3lettres = {}'.format(jour3lettres)
-		print 'blouk : params.sem = {}'.format(params.sem)
+		#	print 'blouk : type(increment) = {}'.format(type(increment))
+		#	print 'blouk : jour3lettres = {}'.format(jour3lettres)
+		print 'blouk : nbJMois = {}'.format(nbJMois)
+		#	print 'blouk : params.sem = {}'.format(params.sem)
+	assert quantiemeDuLundi <= nbJMois
 	# carteACreer = str(increment + quantiemeDuLundi) + '_sem' + params.sem
 	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
 	print 'blouk : carteACreer = {}'.format(carteACreer)
