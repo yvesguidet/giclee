@@ -67,6 +67,8 @@ def majParms():
 
 	nbJMois = nbJours[mois]
 
+	print  "nbJMois = {}".format(nbJMois)
+
 	# samedi 11 mars 2017, 09:31:20 (UTC+0100)
 	#	params = open('/home/yves/2011/2017/printemps/dev/Python/outils/giclee/params.py', "w")
 
@@ -80,11 +82,11 @@ def majParms():
 	jourS = jourSem()
 
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
+	assert(quantiemeDuLundi <= nbJMois)
 
 	# dimanche 31 décembre 2017, 08:37:48 (UTC+0100)
 	if quantiemeDuLundi == 32:
 		quantiemeDuLundi = 1	# affreux
-	#	assert(quantiemeDuLundi <= 31)
 
 	if semCour == 14:	# horrible patch
 		quantiemeDuLundi = 26

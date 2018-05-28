@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # alias n='newMap.pl'
 
-debourre = False # prévoir option -d
+debourre = True # prévoir option -d
 
 l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
@@ -49,8 +49,10 @@ for (increment, jour3lettres) in enumerate (l):
 
 	quantieme2Day = str.split(ati)[2]
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
+	assert quantiemeDuLundi <= 31
 	if debourre:
 		print 'blouk : increment = {}'.format(increment)
+		print 'blouk : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 		print 'blouk : type(increment) = {}'.format(type(increment))
 		print 'blouk : jour3lettres = {}'.format(jour3lettres)
 		print 'blouk : params.sem = {}'.format(params.sem)
