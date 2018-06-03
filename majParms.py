@@ -17,10 +17,11 @@ def majParms():
 
 	mois = str.split(ati)[1]
 
-	assert mois == 'May'
+	#	assert mois == 'May'
 	moisFrancais = {'Mar' : 'mars',
 					'Apr' : 'avril',
-					'May' : 'mai'}
+					'May' : 'mai',
+					'Jun' : 'juin'}
 	mois = moisFrancais[mois]
 
 	nbJours = {	'novembre': 30,
