@@ -2,13 +2,17 @@
 
 from lxml import etree
 
+import os
+
 def lily(c, d):
-	''' insère samaine, veille et lendemain'''
+	''' insère semaine, veille et lendemain'''
 
 	print 'lily : c = {}'.format(c)
 	print 'lily : d = {}'.format(d)
 
-	carte = etree.Element("map")
+	nomLong = os.path.join(d, c)
+
+	carte = etree.parse(nomLong)[0]
 
 #	print(map.tag)
 

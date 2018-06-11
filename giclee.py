@@ -32,6 +32,8 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
+from lily import lily
+
 for (increment, jour3lettres) in enumerate (l):
 	if debourre:
 		print 'blouk : increment = {}'.format(increment)
@@ -75,7 +77,12 @@ for (increment, jour3lettres) in enumerate (l):
 	path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/giclee/pyNewMap')
 	import newMap
 
+	carteACreer += '.mm'
+
 	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
+
+	if False:
+		lily(carteACreer, os.getcwd())
 
 # on revient
 os.chdir(ici)
