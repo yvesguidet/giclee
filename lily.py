@@ -24,7 +24,9 @@ def lily(c, d):
 
 #	print(map.tag)
 
-	x.append( etree.Element("node") )
+	verrue = etree.Element("node")
+	verrue.set('TEXT', 'zyva')
+	x.append(verrue)
 
 	joliarbre = etree.tostring(arbre, pretty_print=True)
 	
