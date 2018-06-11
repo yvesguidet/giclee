@@ -11,8 +11,18 @@ def lily(c, d):
 	print 'lily : d = {}'.format(d)
 
 	nomLong = os.path.join(d, c)
+	
+	arbre = etree.parse(nomLong)
 
-	carte = etree.parse(nomLong)[0]
+	x = arbre.xpath("/map/node")[0]
+	nomCarte = x.get('TEXT')
+
+	print 'lily : x = {}'.format(x)
+	print 'lily : type(x) = {}'.format(type(x))
+	print 'lily : nomCarte = {}'.format(nomCarte)
+
+	assert 0, 'ouais ?'
+	
 
 #	print(map.tag)
 
