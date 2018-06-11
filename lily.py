@@ -20,13 +20,17 @@ def lily(c, d):
 	print 'lily : x = {}'.format(x)
 	print 'lily : type(x) = {}'.format(type(x))
 	print 'lily : nomCarte = {}'.format(nomCarte)
-
-	assert 0, 'ouais ?'
 	
 
 #	print(map.tag)
 
-	carte.append( etree.Element("node") )
+	x.append( etree.Element("node") )
+
+	joliarbre = etree.tostring(arbre, pretty_print=True)
+	
+	print joliarbre
+
+	assert 0, 'ouais ?'
 
 	print(etree.tostring(carte, pretty_print=True))
 
