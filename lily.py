@@ -28,11 +28,18 @@ def lily(c, d):
 	verrue.set('TEXT', 'sem')
 	x.append(verrue)
 
+	# insertion du lien
+	import datetime
+	numSemCour =  datetime.date.today().isocalendar()[1]
+
+	semSuiv = 'Sem{}18.mm'.format(numSemCour + 1)
+
+
+	verrue.set('LINK', semSuiv)
+
 	joliarbre = etree.tostring(arbre, pretty_print=True)
 
-	#	print joliarbre
-
-	#	print(etree.tostring(carte, pretty_print=True))
+	print joliarbre
 
 # /home/yves/2011/dev/Python/XCartes/XNextWeek/postTraitCHebdo.py
 #	def sauveCarte(a, f):
