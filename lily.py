@@ -39,8 +39,15 @@ def lily(c, d):
 
 	joliarbre = etree.tostring(arbre, pretty_print=True)
 
-	print joliarbre
+	#	print joliarbre
+
+	import sys
 
 # /home/yves/2011/dev/Python/XCartes/XNextWeek/postTraitCHebdo.py
+	sys.path.append('/home/yves/2011/dev/Python/XCartes/XNextWeek')
+
+	from postTraitCHebdo import sauveCarte
+
 #	def sauveCarte(a, f):
-	assert 0, 'terminer'
+	sauveCarte(joliarbre, c)
+
