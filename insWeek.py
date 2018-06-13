@@ -41,6 +41,9 @@ def insVeille(c, d):
 	verrue.set('TEXT', 'hier')
 	v = veille(c, d)
 	if v:
+		from os.path import basename
+		v = basename(v)
+		assert not '/' in v
 		verrue.set('LINK', v)
 
 	x.append(verrue)
