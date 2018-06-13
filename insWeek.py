@@ -2,6 +2,12 @@
 
 from lxml import etree
 
+import sys
+
+sys.path.append('/home/yves/2011/dev/Python/XCartes/XNextWeek')
+
+from postTraitCHebdo import sauveCarte
+
 import os, glob
 
 def veille(c, d):
@@ -12,7 +18,13 @@ def veille(c, d):
 	
 	if i == 0:
 		return	# lundi : later
-	assert 0, i
+	hier = jours[i - 1]
+
+	x = os.path.join(d, hier + '*.mm')
+	l = glob.glob(x)
+	assert len(l) == 1
+
+	return l[0]
 
 def insVeille(c, d):
 	''' ins. veille '''
@@ -27,8 +39,14 @@ def insVeille(c, d):
 
 	verrue = etree.Element("node")
 	verrue.set('TEXT', 'hier')
-	verrue.set('LINK', veille(c, d))
-	assert 0, verrue
+	v = veille(c, d)
+	if v:
+		verrue.set('LINK', v)
+
+	x.append(verrue)
+	joliarbre = etree.tostring(arbre, pretty_print=True)
+	sauveCarte(joliarbre, c)
+	
 
 def insWeek(c, d):
 	''' insère semaine, veille et lendemain'''
@@ -55,17 +73,12 @@ def insWeek(c, d):
 
 	verrue.set('LINK', semSuiv)
 
-	joliarbre = etree.tostring(arbre, pretty_print=True)
 
 	#	print joliarbre
 
-	import sys
-
 # /home/yves/2011/dev/Python/XCartes/XNextWeek/postTraitCHebdo.py
-	sys.path.append('/home/yves/2011/dev/Python/XCartes/XNextWeek')
-
-	from postTraitCHebdo import sauveCarte
 
 #	def sauveCarte(a, f):
+	joliarbre = etree.tostring(arbre, pretty_print=True)
 	sauveCarte(joliarbre, c)
 
