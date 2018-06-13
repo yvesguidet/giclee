@@ -2,14 +2,20 @@
 
 from lxml import etree
 
-import os
+import os, glob
 
-def insWeek(c, d):
-	''' insère semaine, veille et lendemain'''
+def veille(c, d):
+	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
+	trwa = c[:3]
 
-	print 'insWeek : c = {}'.format(c)
-	print 'insWeek : d = {}'.format(d)
+	i = jours.index(trwa)
+	
+	if i == 0:
+		return	# lundi : later
+	assert 0, i
 
+def insVeille(c, d):
+	''' ins. veille '''
 	nomLong = os.path.join(d, c)
 
 	arbre = etree.parse(nomLong)
@@ -17,10 +23,22 @@ def insWeek(c, d):
 	x = arbre.xpath("/map/node")[0]
 	nomCarte = x.get('TEXT')
 
-	print 'insWeek : x = {}'.format(x)
-	print 'insWeek : type(x) = {}'.format(type(x))
-	print 'insWeek : nomCarte = {}'.format(nomCarte)
+#	print(map.tag)
 
+	verrue = etree.Element("node")
+	verrue.set('TEXT', 'hier')
+	verrue.set('LINK', veille(c, d))
+	assert 0, verrue
+
+def insWeek(c, d):
+	''' insère semaine, veille et lendemain'''
+
+	nomLong = os.path.join(d, c)
+
+	arbre = etree.parse(nomLong)
+
+	x = arbre.xpath("/map/node")[0]
+	nomCarte = x.get('TEXT')
 
 #	print(map.tag)
 
