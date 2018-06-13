@@ -4,11 +4,11 @@ from lxml import etree
 
 import os
 
-def lily(c, d):
+def insWeek(c, d):
 	''' insère semaine, veille et lendemain'''
 
-	print 'lily : c = {}'.format(c)
-	print 'lily : d = {}'.format(d)
+	print 'insWeek : c = {}'.format(c)
+	print 'insWeek : d = {}'.format(d)
 
 	nomLong = os.path.join(d, c)
 
@@ -17,9 +17,9 @@ def lily(c, d):
 	x = arbre.xpath("/map/node")[0]
 	nomCarte = x.get('TEXT')
 
-	print 'lily : x = {}'.format(x)
-	print 'lily : type(x) = {}'.format(type(x))
-	print 'lily : nomCarte = {}'.format(nomCarte)
+	print 'insWeek : x = {}'.format(x)
+	print 'insWeek : type(x) = {}'.format(type(x))
+	print 'insWeek : nomCarte = {}'.format(nomCarte)
 
 
 #	print(map.tag)

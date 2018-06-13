@@ -32,7 +32,7 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-from lily import lily
+from insWeek import insWeek
 
 for (increment, jour3lettres) in enumerate (l):
 	if debourre:
@@ -81,8 +81,8 @@ for (increment, jour3lettres) in enumerate (l):
 
 	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
-	if False:
-		lily(carteACreer, os.getcwd())
+	if not False:
+		insWeek(carteACreer, os.getcwd())
 
 # on revient
 os.chdir(ici)
