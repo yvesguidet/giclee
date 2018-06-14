@@ -20,7 +20,7 @@ def insLend(c, d):
 	nomCarte = x.get('TEXT')
 
 	verrue = etree.Element("node")
-	verrue.set('TEXT', 'hier')
+	verrue.set('TEXT', 'dem')
 	l = lend(c, d)
 	from os.path import basename
 	l = basename(l)
@@ -30,13 +30,11 @@ def insLend(c, d):
 	x.append(verrue)
 	joliarbre = etree.tostring(arbre, pretty_print=True)
 	sauveCarte(joliarbre, c)
-	assert 0, joliarbre
+	#	assert 0, joliarbre
 
 #	print(map.tag)
 
-	verrue = etree.Element("node")
-	verrue.set('TEXT', 'hier')
-	assert 0, (c, d)
+	#	assert 0, (c, d)
 
 def lend(c, d):
 	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
