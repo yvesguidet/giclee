@@ -44,11 +44,10 @@ def lend(c, d):
 
 	i = jours.index(trwa)
 	dem = jours[i + 1]
-	x = os.path.join(d, dem + '*.mm')
-	l = glob.glob(x)
-	assert 0, l
-	assert len(l) == 1
-	return l[0]
+	x = os.path.join(dem + '*.mm')
+	d = glob.glob(x)[0]	# 2do vérif 1 et 1 seul
+
+	return d
 
 def veille(c, d):
 	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
