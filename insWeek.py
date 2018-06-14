@@ -12,7 +12,43 @@ import os, glob
 
 def insLend(c, d):
 	'''ins. lendemain'''
+	nomLong = os.path.join(d, c)
+
+	arbre = etree.parse(nomLong)
+
+	x = arbre.xpath("/map/node")[0]
+	nomCarte = x.get('TEXT')
+
+	verrue = etree.Element("node")
+	verrue.set('TEXT', 'hier')
+	l = lend(c, d)
+	from os.path import basename
+	l = basename(l)
+	assert not '/' in l
+	verrue.set('LINK', l)
+
+	x.append(verrue)
+	joliarbre = etree.tostring(arbre, pretty_print=True)
+	sauveCarte(joliarbre, c)
+	assert 0, joliarbre
+
+#	print(map.tag)
+
+	verrue = etree.Element("node")
+	verrue.set('TEXT', 'hier')
 	assert 0, (c, d)
+
+def lend(c, d):
+	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
+	trwa = c[:3]
+
+	i = jours.index(trwa)
+	dem = jours[i + 1]
+	x = os.path.join(d, dem + '*.mm')
+	l = glob.glob(x)
+	assert 0, l
+	assert len(l) == 1
+	return l[0]
 
 def veille(c, d):
 	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')

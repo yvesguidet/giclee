@@ -84,7 +84,19 @@ for (increment, jour3lettres) in enumerate (l):
 	if not False:
 		insWeek(carteACreer, os.getcwd())
 		insVeille(carteACreer, os.getcwd())
-		insLend(carteACreer, os.getcwd())
+
+#	on rejoue le match ^^
+
+for (increment, jour3lettres) in enumerate (l):
+	print 'replay : increment = {}'.format(increment)
+	print 'replay : jour3lettres = {}'.format(jour3lettres)
+
+	from glob import glob
+
+	ll = glob(jour3lettres + '*.mm')
+	assert len(ll) == 1
+
+	insLend(ll[0], os.getcwd())
 
 # on revient
 os.chdir(ici)
