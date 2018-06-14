@@ -10,12 +10,16 @@ from postTraitCHebdo import sauveCarte
 
 import os, glob
 
+def insLend(c, d):
+	'''ins. lendemain'''
+	assert 0, (c, d)
+
 def veille(c, d):
 	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 	trwa = c[:3]
 
 	i = jours.index(trwa)
-	
+
 	if i == 0:
 		return	# lundi : later
 	hier = jours[i - 1]
@@ -49,7 +53,7 @@ def insVeille(c, d):
 	x.append(verrue)
 	joliarbre = etree.tostring(arbre, pretty_print=True)
 	sauveCarte(joliarbre, c)
-	
+
 
 def insWeek(c, d):
 	''' insère semaine, veille et lendemain'''

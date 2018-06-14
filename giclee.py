@@ -32,7 +32,7 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-from insWeek import insWeek, insVeille
+from insWeek import insWeek, insVeille, insLend
 
 for (increment, jour3lettres) in enumerate (l):
 	if debourre:
@@ -84,6 +84,7 @@ for (increment, jour3lettres) in enumerate (l):
 	if not False:
 		insWeek(carteACreer, os.getcwd())
 		insVeille(carteACreer, os.getcwd())
+		insLend(carteACreer, os.getcwd())
 
 # on revient
 os.chdir(ici)
