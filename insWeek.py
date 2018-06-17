@@ -22,10 +22,13 @@ def insLend(c, d):
 	verrue = etree.Element("node")
 	verrue.set('TEXT', 'dem')
 	l = lend(c, d)
-	from os.path import basename
-	l = basename(l)
-	assert not '/' in l
-	verrue.set('LINK', l)
+
+	if l:
+		assert l <> None
+		from os.path import basename
+		l = basename(l)
+		assert not '/' in l
+		verrue.set('LINK', l)
 
 	x.append(verrue)
 	joliarbre = etree.tostring(arbre, pretty_print=True)
@@ -41,6 +44,8 @@ def lend(c, d):
 	trwa = c[:3]
 
 	i = jours.index(trwa)
+	if i == 6:
+		return # None (pour dimanche)
 	dem = jours[i + 1]
 	x = os.path.join(dem + '*.mm')
 	d = glob.glob(x)[0]	# 2do vérif 1 et 1 seul
