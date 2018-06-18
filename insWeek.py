@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+bavard = True
+
 from lxml import etree
 
 import sys
@@ -31,6 +33,9 @@ def insLend(c, d):
 		verrue.set('LINK', l)
 
 	x.append(verrue)
+	if bavard:
+		print 'insWeek.insLend : arbre = {}'.format(arbre)
+		print 'insWeek.insLend : type(arbre) = {}'.format(type(arbre))
 	joliarbre = etree.tostring(arbre, pretty_print=True)
 	sauveCarte(joliarbre, c)
 	#	assert 0, joliarbre
