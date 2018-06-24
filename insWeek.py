@@ -37,7 +37,7 @@ def insLend(c, d):
 		print 'insWeek.insLend : arbre = {}'.format(arbre)
 		print 'insWeek.insLend : type(arbre) = {}'.format(type(arbre))
 	joliarbre = etree.tostring(arbre, pretty_print=True)
-	sauveCarte(joliarbre, c)
+	sauveCarte(arbre, c)
 	#	assert 0, joliarbre
 
 #	print(map.tag)
@@ -95,7 +95,7 @@ def insVeille(c, d):
 
 	x.append(verrue)
 	joliarbre = etree.tostring(arbre, pretty_print=True)
-	sauveCarte(joliarbre, c)
+	sauveCarte(arbre, c)
 
 
 def insWeek(c, d):
@@ -129,6 +129,6 @@ def insWeek(c, d):
 # /home/yves/2011/dev/Python/XCartes/XNextWeek/postTraitCHebdo.py
 
 #	def sauveCarte(a, f):
-	joliarbre = etree.tostring(arbre, pretty_print=True)
-	sauveCarte(joliarbre, c)
+	assert isinstance(arbre, etree._ElementTree)
+	sauveCarte(arbre, c)
 
