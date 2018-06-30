@@ -2,9 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1462443364847" ID="ID_1106136207" MODIFIED="1475912083901" TEXT="gicl&#xe9;e">
 <node CREATED="1467526312906" ID="ID_1033495800" LINK="/home/yves/2011/2016/automne/info/giclee/ygGetDate/giclee/giclee.mm" MODIFIED="1483259287957" POSITION="right" TEXT="2016"/>
-<node CREATED="1483256943473" ID="ID_974448614" LINK="/home/yves/2011/2016/automne/cartes/JourDelAn17.mm" MODIFIED="1483259325350" POSITION="right" TEXT="dimanche 1 janvier 2017, 00:07:52 (UTC+0100)&#xa;">
-<cloud/>
-</node>
+<node CREATED="1483256943473" ID="ID_974448614" LINK="/home/yves/2011/2016/automne/cartes/JourDelAn17.mm" MODIFIED="1530361905957" POSITION="right" TEXT="dimanche 1 janvier 2017, 00:07:52 (UTC+0100)&#xa;"/>
 <node CREATED="1485148972551" ID="ID_346616266" MODIFIED="1485675411979" POSITION="left" TEXT="automatiser. no sem ds  menaj.sh">
 <node CREATED="1485674202975" ID="ID_1672895197" MODIFIED="1485674206493" TEXT="/home/yves/2011/2016/automne/pyVernon/support/complementsMureaux/DavP.py"/>
 </node>
@@ -24,8 +22,31 @@
 <node CREATED="1508045077246" ID="ID_1131817295" MODIFIED="1508045077246" TEXT="redate"/>
 </node>
 <node CREATED="1520766733512" ID="ID_206616855" MODIFIED="1520766745433" TEXT="suppr. ygGetDate.py">
-<node CREATED="1520766752576" ID="ID_1746257238" MODIFIED="1520766769647" TEXT="util time.asctime ()"/>
+<node CREATED="1520766752576" ID="ID_1746257238" MODIFIED="1520766769647" TEXT="util time.asctime ()">
+<node CREATED="1520767189327" ID="ID_458861690" MODIFIED="1520767210846" TEXT="in English">
+<icon BUILTIN="smily_bad"/>
 </node>
+<node CREATED="1520767987721" LINK="https://docs.python.org/2/library/locale.html" MODIFIED="1520767987721" TEXT="https://docs.python.org/2/library/locale.html"/>
+<node CREATED="1520768560263" ID="ID_1933113994" MODIFIED="1520769211945" TEXT="locale.setlocale(locale.LC_ALL, (&apos;fr&apos;, &apos;utf-8&apos;)) ">
+<icon BUILTIN="stop"/>
+<icon BUILTIN="smily_bad"/>
+<node CREATED="1520769215386" ID="ID_891585721" MODIFIED="1520769217605" TEXT="http://www.regisblog.fr/2015/01/08/python-strftime-unicode/"/>
+</node>
+<node CREATED="1520772220202" ID="ID_20055776" LINK="https://www.guru99.com/date-time-and-datetime-classes-in-python.html" MODIFIED="1520772220202" TEXT="https://www.guru99.com/date-time-and-datetime-classes-in-python.html"/>
+</node>
+<node CREATED="1520775859148" ID="ID_1597325151" MODIFIED="1520775876072" TEXT="fusion ">
+<node CREATED="1520775893964" MODIFIED="1520775893964" TEXT="semCour"/>
+</node>
+</node>
+</node>
+<node CREATED="1530361802981" ID="ID_1202542284" MODIFIED="1530362347356" POSITION="left" TEXT="2do">
+<node CREATED="1530361802982" ID="ID_1302666236" MODIFIED="1530361862806" TEXT="samedi 30 juin 2018, 14:18:08 (UTC+0200)">
+<cloud/>
+</node>
+<node CREATED="1530361802981" ID="ID_1386808711" MODIFIED="1530361833008" TEXT="r&#xe9;&#xe9;cr; ins* avec">
+<node CREATED="1530361802982" ID="ID_1850676537" LINK="/home/yves/2011/dev/Python/outils/mmNextWeek/recurre/" MODIFIED="1530361968773" TEXT="nodes"/>
+</node>
+<node CREATED="1530362415839" ID="ID_1768262520" MODIFIED="1530362435826" TEXT="ins&#xe9;rer les cartes journali&#xe8;res cr&#xe9;es dans la semaine &#xe0; venir"/>
 </node>
 </node>
 </map>
