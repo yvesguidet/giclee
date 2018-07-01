@@ -32,7 +32,7 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-from insWeek import insWeek, insVeille, insLend
+from insWeek import insWeek, insVeille, insLend, lily
 
 for (increment, jour3lettres) in enumerate (l):
 	if debourre:
@@ -83,6 +83,9 @@ for (increment, jour3lettres) in enumerate (l):
 
 	insWeek(carteACreer, os.getcwd())
 	insVeille(carteACreer, os.getcwd())
+
+	d1 = '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
+	lily(carteACreer, d1)
 
 #	on rejoue le match ^^
 

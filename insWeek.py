@@ -120,7 +120,6 @@ def insWeek(c, d):
 
 	semSuiv = 'Sem{}18.mm'.format(numSemCour + 1)
 
-
 	verrue.set('LINK', semSuiv)
 
 
@@ -132,3 +131,20 @@ def insWeek(c, d):
 	assert isinstance(arbre, etree._ElementTree)
 	sauveCarte(arbre, c)
 
+def lily(c, d):
+	''' màj lien  '''
+
+	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
+
+	import datetime
+	numSemSuiv =  datetime.date.today().isocalendar()[1] + 1
+	semSuiv = 'Sem{}18.mm'.format(numSemSuiv)
+
+	import os
+
+	semSuiv = os.path.join(d, semSuiv)
+
+	from nodes import noeudsAyantValeur
+
+	l = noeudsAyantValeur(semSuiv, 'TEXT', 'lun')
+	assert 0, l
