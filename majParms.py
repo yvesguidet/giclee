@@ -21,7 +21,8 @@ def majParms():
 	moisFrancais = {'Mar' : 'mars',
 					'Apr' : 'avril',
 					'May' : 'mai',
-					'Jun' : 'juin'}
+					'Jun' : 'juin',
+					'Jul' : 'juillet'}
 	mois = moisFrancais[mois]
 
 	nbJours = {	'novembre': 30,
