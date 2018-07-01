@@ -81,9 +81,8 @@ for (increment, jour3lettres) in enumerate (l):
 
 	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
-	if not False:
-		insWeek(carteACreer, os.getcwd())
-		insVeille(carteACreer, os.getcwd())
+	insWeek(carteACreer, os.getcwd())
+	insVeille(carteACreer, os.getcwd())
 
 #	on rejoue le match ^^
 
