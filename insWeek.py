@@ -147,4 +147,7 @@ def lily(c, d):
 	from nodes import noeudsAyantValeur
 
 	l = noeudsAyantValeur(semSuiv, 'TEXT', 'lun')
-	assert 0, l
+	assert len(l) == 1
+	n = l[0]
+	#	zoli(n, impr = True)
+	assert 0, n
