@@ -85,6 +85,7 @@ for (increment, jour3lettres) in enumerate (l):
 	insVeille(carteACreer, os.getcwd())
 
 	d1 = '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
+	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 	lily(carteACreer, d1)
 
 #	on rejoue le match ^^

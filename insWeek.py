@@ -134,7 +134,7 @@ def insWeek(c, d):
 def lily(c, d):
 	''' màj lien  '''
 
-	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
+	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
 
 	import datetime
 	numSemSuiv =  datetime.date.today().isocalendar()[1] + 1
@@ -143,6 +143,9 @@ def lily(c, d):
 	import os
 
 	semSuiv = os.path.join(d, semSuiv)
+
+	assert d ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
+	assert os.path.exists(semSuiv), 'lily : {} non trouvé'.format(semSuiv)
 
 	from nodes import noeudsAyantValeur
 
