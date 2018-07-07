@@ -147,10 +147,10 @@ def lily(c, d):
 	assert d ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 	assert os.path.exists(semSuiv), 'lily : {} non trouvé'.format(semSuiv)
 
-	from nodes import noeudsAyantValeur
+	from nodes import noeudsAyantValeur, zoli
 
 	l = noeudsAyantValeur(semSuiv, 'TEXT', 'lun')
 	assert len(l) == 1
 	n = l[0]
-	#	zoli(n, impr = True)
+	zoli(n, impr = True)
 	assert 0, n
