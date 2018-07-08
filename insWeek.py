@@ -2,6 +2,8 @@
 
 bavard = True
 
+jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
+
 from lxml import etree
 
 import sys
@@ -45,7 +47,6 @@ def insLend(c, d):
 	#	assert 0, (c, d)
 
 def lend(c, d):
-	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 	trwa = c[:3]
 
 	i = jours.index(trwa)
