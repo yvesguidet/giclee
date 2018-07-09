@@ -154,4 +154,4 @@ def lily(c, d):
 	assert len(l) == 1
 	n = l[0]
 	zoli(n, impr = True)
-	assert 0, n
+	#	assert 0, n
