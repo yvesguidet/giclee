@@ -86,13 +86,14 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	d1 = '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
 	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
-	lily(carteACreer, d1)
 
 #	on rejoue le match ^^
 
 for (increment, jour3lettres) in enumerate (jours):
 	print 'replay : increment = {}'.format(increment)
 	print 'replay : jour3lettres = {}'.format(jour3lettres)
+	lily(carteACreer, d1, jour3lettres)
+	assert 0
 
 	from glob import glob
 

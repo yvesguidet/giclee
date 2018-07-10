@@ -132,7 +132,7 @@ def insWeek(c, d):
 	assert isinstance(arbre, etree._ElementTree)
 	sauveCarte(arbre, c)
 
-def lily(c, d):
+def lily(c, d, j3):
 	''' màj lien  '''
 
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
@@ -150,8 +150,9 @@ def lily(c, d):
 
 	from nodes import noeudsAyantValeur, zoli
 
-	l = noeudsAyantValeur(semSuiv, 'TEXT', 'lun')
+	l = noeudsAyantValeur(semSuiv, 'TEXT', j3)
 	assert len(l) == 1
 	eltJour3 = l[0]
 	#	zoli(eltJour3, impr = True)
-	assert 0, eltJour3
+	lien = eltJour3.get('LINK')
+	assert 0, lien
