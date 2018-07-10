@@ -152,6 +152,6 @@ def lily(c, d):
 
 	l = noeudsAyantValeur(semSuiv, 'TEXT', 'lun')
 	assert len(l) == 1
-	n = l[0]
-	zoli(n, impr = True)
-	#	assert 0, n
+	eltJour3 = l[0]
+	#	zoli(eltJour3, impr = True)
+	assert 0, eltJour3
