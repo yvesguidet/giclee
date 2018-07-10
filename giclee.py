@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # alias n='newMap.pl'
 
-debourre = False # prévoir option -d
+debourre = True # prévoir option -d
 
-l = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
+from insWeek import jours
 
 # à passer en arg
 
@@ -34,7 +34,7 @@ os.chdir(dirtest)
 
 from insWeek import insWeek, insVeille, insLend, lily
 
-for (increment, jour3lettres) in enumerate (l):
+for (increment, jour3lettres) in enumerate (jours):
 	if debourre:
 		print 'blouk : increment = {}'.format(increment)
 		print 'blouk : jour3lettres = {}'.format(jour3lettres)
@@ -90,7 +90,7 @@ for (increment, jour3lettres) in enumerate (l):
 
 #	on rejoue le match ^^
 
-for (increment, jour3lettres) in enumerate (l):
+for (increment, jour3lettres) in enumerate (jours):
 	print 'replay : increment = {}'.format(increment)
 	print 'replay : jour3lettres = {}'.format(jour3lettres)
 
