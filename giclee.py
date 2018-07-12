@@ -79,13 +79,14 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	carteACreer += '.mm'
 
+	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
+
+	lily(carteACreer, d1, jour3lettres)
+
 	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
 	insWeek(carteACreer, os.getcwd())
 	insVeille(carteACreer, os.getcwd())
-
-	d1 = '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
-	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 
 #	on rejoue le match ^^
 
@@ -93,7 +94,7 @@ for (increment, jour3lettres) in enumerate (jours):
 	print 'replay : increment = {}'.format(increment)
 	print 'replay : jour3lettres = {}'.format(jour3lettres)
 	assert 0, increment
-	lily(carteACreer, d1, jour3lettres)
+	#	lily(carteACreer, d1, jour3lettres)
 
 	from glob import glob
 

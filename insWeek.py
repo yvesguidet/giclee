@@ -132,7 +132,7 @@ def insWeek(c, d):
 	assert isinstance(arbre, etree._ElementTree)
 	sauveCarte(arbre, c)
 
-def lily(c, d, j3, bidule):
+def lily(c, d, j3):
 	''' màj lien  '''
 
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
