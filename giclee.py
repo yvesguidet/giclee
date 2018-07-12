@@ -32,7 +32,7 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-from insWeek import insWeek, insVeille, insLend, lily
+from insWeek import insWeek, insVeille, insLend, lily, pouet
 
 for (increment, jour3lettres) in enumerate (jours):
 	if debourre:
@@ -105,6 +105,10 @@ for (increment, jour3lettres) in enumerate (jours):
 
 # on revient
 os.chdir(ici)
+
+
+s = pouet()
+assert 0, s
 
 k = './try.sh'
 os.system(k)

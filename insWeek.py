@@ -123,7 +123,6 @@ def insWeek(c, d):
 	# insertion du lien
 
 	numSemCour =  pouet()
-	numSemCour =  datetime.date.today().isocalendar()[1]
 
 	semSuiv = 'Sem{}18.mm'.format(numSemCour + 1)
 
