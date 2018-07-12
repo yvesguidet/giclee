@@ -156,8 +156,4 @@ def lily(c, d, j3):
 	#	zoli(eltJour3, impr = True)
 	lien = eltJour3.get('LINK')
 	zob = "{}_sem{}".format(j3, numSemSuiv)
-	assert 0, zob
-	assert 0, numSemSuiv
-	assert 0, j3
-	assert 0, lien
-	assert 0, zob
+	eltJour3.set('LINK', zob)
