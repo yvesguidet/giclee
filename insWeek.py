@@ -14,6 +14,11 @@ from postTraitCHebdo import sauveCarte
 
 import os, glob
 
+import datetime
+
+def pouet():
+	return datetime.date.today().isocalendar()[1]
+
 def insLend(c, d):
 	'''ins. lendemain'''
 	nomLong = os.path.join(d, c)
@@ -59,7 +64,7 @@ def lend(c, d):
 	return d
 
 def veille(c, d):
-	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
+	#	jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 	trwa = c[:3]
 
 	i = jours.index(trwa)
@@ -116,7 +121,8 @@ def insWeek(c, d):
 	x.append(verrue)
 
 	# insertion du lien
-	import datetime
+
+	numSemCour =  pouet()
 	numSemCour =  datetime.date.today().isocalendar()[1]
 
 	semSuiv = 'Sem{}18.mm'.format(numSemCour + 1)
@@ -151,7 +157,9 @@ def lily(c, d, j3):
 	from nodes import noeudsAyantValeur, zoli
 
 	l = noeudsAyantValeur(semSuiv, 'TEXT', j3)
-	assert len(l) == 1
+
+	#	assert len(l) == 1
+
 	eltJour3 = l[0]
 	#	zoli(eltJour3, impr = True)
 	lien = eltJour3.get('LINK')

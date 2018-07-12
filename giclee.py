@@ -93,7 +93,7 @@ for (increment, jour3lettres) in enumerate (jours):
 for (increment, jour3lettres) in enumerate (jours):
 	print 'replay : increment = {}'.format(increment)
 	print 'replay : jour3lettres = {}'.format(jour3lettres)
-	assert 0, increment
+	
 	#	lily(carteACreer, d1, jour3lettres)
 
 	from glob import glob
