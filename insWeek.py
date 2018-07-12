@@ -16,7 +16,7 @@ import os, glob
 
 import datetime
 
-def pouet():
+def numSemCour():
 	return datetime.date.today().isocalendar()[1]
 
 def insLend(c, d):
@@ -122,9 +122,9 @@ def insWeek(c, d):
 
 	# insertion du lien
 
-	numSemCour =  pouet()
+	nsc =  numSemCour()
 
-	semSuiv = 'Sem{}18.mm'.format(numSemCour + 1)
+	semSuiv = 'Sem{}18.mm'.format(nsc + 1)
 
 	verrue.set('LINK', semSuiv)
 

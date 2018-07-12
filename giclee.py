@@ -32,7 +32,7 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-from insWeek import insWeek, insVeille, insLend, lily, pouet
+from insWeek import insWeek, insVeille, insLend, lily, numSemCour
 
 for (increment, jour3lettres) in enumerate (jours):
 	if debourre:
@@ -93,7 +93,7 @@ for (increment, jour3lettres) in enumerate (jours):
 for (increment, jour3lettres) in enumerate (jours):
 	print 'replay : increment = {}'.format(increment)
 	print 'replay : jour3lettres = {}'.format(jour3lettres)
-	
+
 	#	lily(carteACreer, d1, jour3lettres)
 
 	from glob import glob
@@ -107,7 +107,7 @@ for (increment, jour3lettres) in enumerate (jours):
 os.chdir(ici)
 
 
-s = pouet()
+s = numSemCour()
 assert 0, s
 
 k = './try.sh'
