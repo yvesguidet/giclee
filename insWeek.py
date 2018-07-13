@@ -168,7 +168,10 @@ def lily(c, d, j3):
 	import nodes
 	#	zoli(nodes.arbre, impr = True)
 	#	assert 0, nodes.arbre	# var. glo. progr de m...
-	sauveCarte(nodes.arbre, c)
-	assert 0, nodes.zob
+	
+	assert not isinstance(nodes.zob, str)
+	assert isinstance(nodes.zob, etree._ElementTree)
+	
+	sauveCarte(nodes.zob, c)
 	
 	
