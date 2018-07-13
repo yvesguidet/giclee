@@ -143,7 +143,7 @@ def lily(c, d, j3):
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
 
 	import datetime
-	numSemSuiv =  datetime.date.today().isocalendar()[1] + 1
+	numSemSuiv =  numSemCour() + 1
 	semSuiv = 'Sem{}18.mm'.format(numSemSuiv)
 
 	import os
@@ -162,5 +162,13 @@ def lily(c, d, j3):
 	eltJour3 = l[0]
 	#	zoli(eltJour3, impr = True)
 	lien = eltJour3.get('LINK')
-	zob = "{}_sem{}".format(j3, numSemSuiv)
-	eltJour3.set('LINK', zob)
+	lien = "{}_sem{}".format(j3, numSemSuiv)
+	eltJour3.set('LINK', lien)
+	
+	import nodes
+	#	zoli(nodes.arbre, impr = True)
+	#	assert 0, nodes.arbre	# var. glo. progr de m...
+	sauveCarte(nodes.arbre, c)
+	assert 0, nodes.zob
+	
+	
