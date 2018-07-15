@@ -153,9 +153,12 @@ def lily(c, d, j3):
 	assert d ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 	assert os.path.exists(semSuiv), 'lily : {} non trouvé'.format(semSuiv)
 
-	from nodes import noeudsAyantValeur, zoli
+	from nodes import noeudsAyantValeur, zoli, nodes, zob
 
 	l = noeudsAyantValeur(semSuiv, 'TEXT', j3)
+
+	assert zob
+	prout = zob
 
 	#	assert len(l) == 1
 
@@ -165,13 +168,14 @@ def lily(c, d, j3):
 	lien = "{}_sem{}".format(j3, numSemSuiv)
 	eltJour3.set('LINK', lien)
 	
-	import nodes
+	#	import nodes
 	#	zoli(nodes.arbre, impr = True)
 	#	assert 0, nodes.arbre	# var. glo. progr de m...
 	
-	assert not isinstance(nodes.zob, str)
-	assert isinstance(nodes.zob, etree._ElementTree)
+	assert not isinstance(prout, str)
+	assert prout
+	assert isinstance(prout, etree._ElementTree)
 	
-	sauveCarte(nodes.zob, c)
+	sauveCarte(prout, c)
 	
 	
