@@ -36,11 +36,12 @@ from insWeek import insWeek, insVeille, insLend, lily, numSemCour
 
 for (increment, jour3lettres) in enumerate (jours):
 	if debourre:
-		print 'blouk : increment = {}'.format(increment)
-		print 'blouk : jour3lettres = {}'.format(jour3lettres)
+		#	print 'blouk : increment = {}'.format(increment)
+		#	print 'blouk : jour3lettres = {}'.format(jour3lettres)
 
 	#	util. str.format()
 	#	mettre un format
+		pass
 
 	from sys import path
 
@@ -55,11 +56,13 @@ for (increment, jour3lettres) in enumerate (jours):
 	nbJMois = params.nbJMois
 	if debourre:
 		#	print 'blouk : increment = {}'.format(increment)
-		print 'blouk : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
+		#	print 'blouk : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 		#	print 'blouk : type(increment) = {}'.format(type(increment))
 		#	print 'blouk : jour3lettres = {}'.format(jour3lettres)
-		print 'blouk : nbJMois = {}'.format(nbJMois)
+		#	print 'blouk : nbJMois = {}'.format(nbJMois)
 		#	print 'blouk : params.sem = {}'.format(params.sem)
+		pass
+
 	if quantiemeDuLundi > nbJMois:
 		quantiemeDuLundi -= nbJMois
 
@@ -81,7 +84,7 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 
-	lily(carteACreer, d1, jour3lettres)
+	lily(carteACreer, d1)
 
 	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
@@ -91,8 +94,8 @@ for (increment, jour3lettres) in enumerate (jours):
 #	on rejoue le match ^^
 
 for (increment, jour3lettres) in enumerate (jours):
-	print 'replay : increment = {}'.format(increment)
-	print 'replay : jour3lettres = {}'.format(jour3lettres)
+	#	print 'replay : increment = {}'.format(increment)
+	#	print 'replay : jour3lettres = {}'.format(jour3lettres)
 
 	#	lily(carteACreer, d1, jour3lettres)
 
@@ -106,9 +109,6 @@ for (increment, jour3lettres) in enumerate (jours):
 # on revient
 os.chdir(ici)
 
-
-s = numSemCour()
-assert 0, s
 
 k = './try.sh'
 os.system(k)
