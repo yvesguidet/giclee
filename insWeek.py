@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-bavard = True
+bavard = False
 
 jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
@@ -143,7 +143,7 @@ def lily(c, d, j3):
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
 
 	import datetime
-	numSemSuiv =  numSemCour() + 1
+	numSemSuiv =  datetime.date.today().isocalendar()[1] + 1
 	semSuiv = 'Sem{}18.mm'.format(numSemSuiv)
 
 	import os
@@ -153,29 +153,14 @@ def lily(c, d, j3):
 	assert d ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 	assert os.path.exists(semSuiv), 'lily : {} non trouvé'.format(semSuiv)
 
-	from nodes import noeudsAyantValeur, zoli, nodes, zob
+	from nodes import noeudsAyantValeur, zoli
 
 	l = noeudsAyantValeur(semSuiv, 'TEXT', j3)
-
-	assert zob
-	prout = zob
 
 	#	assert len(l) == 1
 
 	eltJour3 = l[0]
 	#	zoli(eltJour3, impr = True)
 	lien = eltJour3.get('LINK')
-	lien = "{}_sem{}".format(j3, numSemSuiv)
-	eltJour3.set('LINK', lien)
-	
-	#	import nodes
-	#	zoli(nodes.arbre, impr = True)
-	#	assert 0, nodes.arbre	# var. glo. progr de m...
-	
-	assert not isinstance(prout, str)
-	assert prout
-	assert isinstance(prout, etree._ElementTree)
-	
-	sauveCarte(prout, c)
-	
-	
+	nvLien = "{}_sem{}".format(j3, numSemSuiv)
+	eltJour3.set('LINK', nvLien)

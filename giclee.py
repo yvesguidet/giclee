@@ -82,9 +82,8 @@ for (increment, jour3lettres) in enumerate (jours):
 	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 
 	lily(carteACreer, d1, jour3lettres)
-	assert 0, nodes.zob
 
-	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = True)
+	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
 	insWeek(carteACreer, os.getcwd())
 	insVeille(carteACreer, os.getcwd())
@@ -108,11 +107,7 @@ for (increment, jour3lettres) in enumerate (jours):
 os.chdir(ici)
 
 
-s = numSemCour() + 1
-s = 'Sem{}18.mm'.format(s)	# dur, dur
-
-#	/media/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/Sem2918.mm
-
+s = numSemCour()
 assert 0, s
 
 k = './try.sh'
