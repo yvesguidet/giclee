@@ -166,7 +166,8 @@ def lily(c, d):
 	eltJour3 = l[0]
 	#	zoli(eltJour3, impr = True)
 	lien = eltJour3.get('LINK')
-	nvLien = "{}_sem{}".format(j3, numSemSuiv)
+	nvLien = "{}_sem{}.mm".format(j3, numSemSuiv)
+	#	assert 0, nvLien
 	eltJour3.set('LINK', nvLien)
 
 	sauveCarte(a, semSuiv)
