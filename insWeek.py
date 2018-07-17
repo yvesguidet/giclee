@@ -137,7 +137,7 @@ def insWeek(c, d):
 	assert isinstance(arbre, etree._ElementTree)
 	sauveCarte(arbre, c)
 
-def lily(c, d):
+def lily(eltCarteJour, d):
 	''' màj lien  '''
 
 	n = numSemCour()
@@ -157,7 +157,7 @@ def lily(c, d):
 
 	from nodes import noeudsAyantValeur, zoli
 
-	j3 = c[0:3]
+	j3 = eltCarteJour[0:3]
 
 	(l, a) = noeudsAyantValeur(semSuiv, 'TEXT', j3)
 
