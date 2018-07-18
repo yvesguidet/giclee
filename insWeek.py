@@ -161,6 +161,9 @@ def lily(eltCarteJour, d):
 
 	(l, a) = noeudsAyantValeur(semSuiv, 'TEXT', j3)
 
+	z = zoli(a, impr = True, court = True)
+	assert 0, z
+
 	#	assert len(l) == 1
 
 	eltJour3 = l[0]
