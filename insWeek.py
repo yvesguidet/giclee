@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-bavard = False
+prod = True
 
 jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
@@ -40,9 +40,6 @@ def insLend(c, d):
 		verrue.set('LINK', l)
 
 	x.append(verrue)
-	if bavard:
-		print 'insWeek.insLend : arbre = {}'.format(arbre)
-		print 'insWeek.insLend : type(arbre) = {}'.format(type(arbre))
 	joliarbre = etree.tostring(arbre, pretty_print=True)
 	sauveCarte(arbre, c)
 	#	assert 0, joliarbre
@@ -162,7 +159,9 @@ def lily(eltCarteJour, d):
 	(l, a) = noeudsAyantValeur(semSuiv, 'TEXT', j3)
 
 	z = zoli(a, impr = True, court = True)
-	assert 0, z
+
+	if not prod:
+		assert 0, z
 
 	#	assert len(l) == 1
 
