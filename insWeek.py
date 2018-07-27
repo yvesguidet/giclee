@@ -150,7 +150,7 @@ def lily(eltCarteJour, d):
 	semSuiv = os.path.join(d, semSuiv)
 
 	assert d ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
-	assert os.path.exists(semSuiv), 'lily : {} non trouvé'.format(semSuiv)
+	assert os.path.exists(semSuiv), 'lily : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	from nodes import noeudsAyantValeur, zoli
 
