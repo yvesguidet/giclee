@@ -67,12 +67,14 @@ for (increment, jour3lettres) in enumerate (jours):
 		quantiemeDuLundi -= nbJMois
 
 	# carteACreer = str(increment + quantiemeDuLundi) + '_sem' + params.sem
+
+	assert increment + quantiemeDuLundi <= 31 # juillet
+
 	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
 	#	print 'blouk : carteACreer = {}'.format(carteACreer)
 
 	if jour3lettres != 'lun' and debourre:
 		print 'giclee : increment = {}'.format(increment)
-		#	assert 0, 'giclee.py : carteACreer = {}'.format(carteACreer)
 
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
