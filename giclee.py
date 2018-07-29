@@ -68,10 +68,15 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	# carteACreer = str(increment + quantiemeDuLundi) + '_sem' + params.sem
 
-	assert increment + quantiemeDuLundi <= 31 # juillet
+	quantieme = increment + quantiemeDuLundi
+	if quantieme > 31:	# juillet
+		quantieme -= 31
 
-	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
-	#	print 'blouk : carteACreer = {}'.format(carteACreer)
+		print 'quantieme = {}'.format(quantieme)
+
+	#	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
+	carteACreer = "{}{}_sem{}".format(jour3lettres, quantieme, params.sem)
+	print 'blouk : carteACreer = {}'.format(carteACreer)
 
 	if jour3lettres != 'lun' and debourre:
 		print 'giclee : increment = {}'.format(increment)
