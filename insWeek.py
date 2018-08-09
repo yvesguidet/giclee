@@ -137,6 +137,8 @@ def insWeek(c, d):
 def lily(eltCarteJour, d):
 	''' màj lien  '''
 
+	#	assert 0, eltCarteJour
+
 	n = numSemCour()
 
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
@@ -172,6 +174,7 @@ def lily(eltCarteJour, d):
 	if not prod:
 		import params
 
+		assert 0, eltCarteJour
 		assert 0, params.quantiemeDuLundi
 		assert 0, (lien, nvLien)
 
