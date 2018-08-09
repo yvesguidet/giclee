@@ -172,7 +172,8 @@ def lily(eltCarteJour, d):
 	#	lien = eltJour3.get('LINK')
 	#	eltCarteJour = "{}_sem{}.mm".format(j3, numSemSuiv)
 	if not prod:
-		import params
+		pass
+		#	import params
 
 		#	assert 0, eltCarteJour
 		#	assert 0, params.quantiemeDuLundi
