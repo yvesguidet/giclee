@@ -134,8 +134,8 @@ def insWeek(c, d):
 	assert isinstance(arbre, etree._ElementTree)
 	sauveCarte(arbre, c)
 
-def lily(cartej3AsString, repertoire):
-	''' màj lien sur cartej3AsString ds sem suiv '''
+def majLienDsSuiv(cartej3AsString, repertoire):
+	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
 
 	#	assert 0, repertoire
 
@@ -154,7 +154,7 @@ def lily(cartej3AsString, repertoire):
 	semSuiv = os.path.join(repertoire, semSuiv)
 
 	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
-	assert os.path.exists(semSuiv), 'lily : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
+	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	j3 = cartej3AsString[0:3]
 

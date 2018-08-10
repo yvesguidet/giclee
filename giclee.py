@@ -32,7 +32,7 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-from insWeek import insWeek, insVeille, insLend, lily, numSemCour
+from insWeek import insWeek, insVeille, insLend, majLienDsSuiv, numSemCour
 
 for (increment, jour3lettres) in enumerate (jours):
 	if debourre:
@@ -83,7 +83,7 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 
-	lily(carteACreer, d1)
+	majLienDsSuiv(carteACreer, d1)
 
 	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
@@ -96,7 +96,7 @@ for (increment, jour3lettres) in enumerate (jours):
 	#	print 'replay : increment = {}'.format(increment)
 	#	print 'replay : jour3lettres = {}'.format(jour3lettres)
 
-	#	lily(carteACreer, d1, jour3lettres)
+	#	majLienDsSuiv(carteACreer, d1, jour3lettres)
 
 	from glob import glob
 
