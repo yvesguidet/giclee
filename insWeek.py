@@ -162,24 +162,8 @@ def lily(eltCarteJour, d):
 
 	z = zoli(a, impr = True, court = True)
 
-	if False:	#	;)
-		assert 0, z
-
-	#	assert len(l) == 1
-
 	eltJour3 = l[0]
-	#	zoli(eltJour3, impr = True)
-	#	lien = eltJour3.get('LINK')
-	#	eltCarteJour = "{}_sem{}.mm".format(j3, numSemSuiv)
-	if not prod:
-		pass
-		#	import params
 
-		#	assert 0, eltCarteJour
-		#	assert 0, params.quantiemeDuLundi
-		#	assert 0, (lien, eltCarteJour)
-
-		#	assert 'lun' in eltCarteJour	# fo bien commencer
 	eltJour3.set('LINK', eltCarteJour)
 
 	sauveCarte(a, semSuiv)
