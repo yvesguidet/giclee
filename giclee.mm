@@ -46,7 +46,8 @@
 <linktarget COLOR="#b0b0b0" DESTINATION="ID_1850676537" ENDARROW="Default" ENDINCLINATION="371;0;" ID="Arrow_ID_613477340" SOURCE="ID_119459684" STARTARROW="None" STARTINCLINATION="371;0;"/>
 </node>
 </node>
-<node CREATED="1530362415839" ID="ID_1768262520" MODIFIED="1531805743366" TEXT="ins&#xe9;rer les cartes journali&#xe8;res cr&#xe9;es dans la semaine &#xe0; venir (lily)">
+<node CREATED="1530362415839" ID="ID_1768262520" MODIFIED="1533871837554" TEXT="ins&#xe9;rer les cartes journali&#xe8;res cr&#xe9;es dans la semaine &#xe0; venir (majLienDsSuiv)">
+<icon BUILTIN="button_ok"/>
 <node CREATED="1531804658908" ID="ID_119459684" LINK="/home/yves/2011/dev/Python/outils/giclee" MODIFIED="1531805801585" TEXT="zoli aj. arg short ou nom">
 <arrowlink DESTINATION="ID_1850676537" ENDARROW="Default" ENDINCLINATION="371;0;" ID="Arrow_ID_613477340" STARTARROW="None" STARTINCLINATION="371;0;"/>
 </node>
