@@ -134,10 +134,12 @@ def insWeek(c, d):
 	assert isinstance(arbre, etree._ElementTree)
 	sauveCarte(arbre, c)
 
-def lily(eltCarteJour, repertoire):
-	''' màj lien  '''
+def lily(cartej3AsString, repertoire):
+	''' màj lien sur cartej3AsString ds sem suiv '''
 
 	#	assert 0, repertoire
+
+	from nodes import noeudsAyantValeur, zoli
 
 	n = numSemCour()
 
@@ -154,16 +156,14 @@ def lily(eltCarteJour, repertoire):
 	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 	assert os.path.exists(semSuiv), 'lily : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
-	from nodes import noeudsAyantValeur, zoli
+	j3 = cartej3AsString[0:3]
 
-	j3 = eltCarteJour[0:3]
+	(l, arbreSemSuiv) = noeudsAyantValeur(semSuiv, 'TEXT', j3)
 
-	(l, a) = noeudsAyantValeur(semSuiv, 'TEXT', j3)
-
-	z = zoli(a, impr = True, court = True)
+	z = zoli(arbreSemSuiv, impr = True, court = True)
 
 	eltJour3 = l[0]
 
-	eltJour3.set('LINK', eltCarteJour)
+	eltJour3.set('LINK', cartej3AsString)
 
-	sauveCarte(a, semSuiv)
+	sauveCarte(arbreSemSuiv, semSuiv)
