@@ -3,6 +3,7 @@
 # alias n='newMap.pl'
 
 debourre = True # prévoir option -d
+hardi = False
 
 from insWeek import jours
 
@@ -83,7 +84,8 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 
-	majLienDsSuiv(carteACreer, d1)
+	if hardi:
+		majLienDsSuiv(carteACreer, d1)
 
 	newMap.main(nombase = carteACreer, leDir = os.getcwd(), dater = False, over = False)
 
