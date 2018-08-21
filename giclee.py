@@ -4,6 +4,7 @@
 
 debourre = True # prévoir option -d
 hardi = False
+hardi = True
 
 from insWeek import jours
 
