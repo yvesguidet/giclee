@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-prod = False
+prod = True
 
 jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
@@ -139,6 +139,8 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	#	assert 0, repertoire
 
+	sys.path.append('/home/yves/2011/dev/Python/XCartes/XNoeud/nodes-dev/')
+	
 	from nodes import noeudsAyantValeur, zoli
 
 	n = numSemCour()
@@ -158,11 +160,11 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	j3 = cartej3AsString[0:3]
 
-	(l, arbreSemSuiv) = noeudsAyantValeur(semSuiv, 'TEXT', j3)
+	noeudsLun = noeudsAyantValeur(semSuiv, 'TEXT', j3)[0]
 
-	z = zoli(arbreSemSuiv, impr = True, court = True)
+	assert 0, type(noeudsLun)
 
-	eltJour3 = l[0]
+	eltJour3 = noeudsLun[0]
 
 	eltJour3.set('LINK', cartej3AsString)
 
