@@ -139,9 +139,9 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	#	assert 0, repertoire
 
-	sys.path.append('/home/yves/2011/dev/Python/XCartes/XNoeud/nodes-dev/')
+	#	sys.path.append('/home/yves/2011/dev/Python/XCartes/XNoeud/nodes-dev/')
 	
-	from nodes import noeudsAyantValeur, zoli
+	#	from nodes import noeudsAyantValeur, zoli
 
 	n = numSemCour()
 
