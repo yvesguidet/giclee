@@ -134,14 +134,22 @@ def insWeek(c, d):
 	assert isinstance(arbre, etree._ElementTree)
 	sauveCarte(arbre, c)
 
+sys.path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/recurre')
+
+from nodes import zoli
+
+def chTexteCarte(j3, semSuiv):
+	arbre = etree.parse(semSuiv)
+	zoli(arbre, impr = True)
+	assert 0, arbre
+
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
 
 	#	assert 0, repertoire
 
 	#	sys.path.append('/home/yves/2011/dev/Python/XCartes/XNoeud/nodes-dev/')
-	
-	#	from nodes import noeudsAyantValeur, zoli
+
 
 	n = numSemCour()
 
@@ -159,6 +167,8 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	j3 = cartej3AsString[0:3]
+
+	assert 0, chTexteCarte(j3, semSuiv)
 
 	noeudsLun = noeudsAyantValeur(semSuiv, 'TEXT', j3)[0]
 
