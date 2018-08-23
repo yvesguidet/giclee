@@ -15,6 +15,9 @@ import os
 import majParms
 majParms.majParms()
 
+from sys import path
+path.append('giclee')
+
 import params
 
 oct = '_'	# mieux que '-' pour modif
