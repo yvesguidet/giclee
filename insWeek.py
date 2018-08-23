@@ -148,7 +148,7 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
 
 	import datetime
-	numSemSuiv =  datetime.date.today().isocalendar()[1] + 1
+	numSemSuiv =  n + 1
 	semSuiv = 'Sem{}18.mm'.format(numSemSuiv)
 
 	import os
