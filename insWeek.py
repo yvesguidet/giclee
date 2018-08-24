@@ -176,6 +176,9 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	j3 = cartej3AsString[0:3]
 
 	chTexteCarte(j3, semSuiv)
+
+	return
+
 	assert 0, 'So ?'
 
 	noeudsLun = noeudsAyantValeur(semSuiv, 'TEXT', j3)[0]
