@@ -16,14 +16,14 @@ def scr(j3, arbre):
 
 	elements = arbre.findall('.//node')	# XPath, recursive.
 	print len(elements)
-	for (i, e) in enumerate(elements):
+	for e in elements:
 		#	zoli(e, impr = True)
 		t = e.get('TEXT')
-		print (i, t)
+
 		if t == None:
-			continue
-		assert 0, t
-		scr(j3, e)
+			return
+		troisPremiers = t[:3]
+		assert troisPremiers <> j3
 
 def chTexteCarte(j3, semSuiv):
 	arbre = etree.parse(semSuiv)
