@@ -138,14 +138,16 @@ sys.path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/recurre')
 
 from nodes import zoli
 
-def chTexteCarte(j3, semSuiv):
-	arbre = etree.parse(semSuiv)
-	elements = arbre.findall('.//node')	# XPath, recursive.
-	#	assert 0, len(elements)
-	for e in elements:
-		zoli(e, impr = True)
+from chTexteCarte import chTexteCarte
 
-		assert 0, e
+#	def chTexteCarte(j3, semSuiv):
+#		arbre = etree.parse(semSuiv)
+#		elements = arbre.findall('.//node')	# XPath, recursive.
+#		#	assert 0, len(elements)
+#		for e in elements:
+#			zoli(e, impr = True)
+#	
+#			assert 0, e
 	
 
 def majLienDsSuiv(cartej3AsString, repertoire):
@@ -173,7 +175,8 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	j3 = cartej3AsString[0:3]
 
-	assert 0, chTexteCarte(j3, semSuiv)
+	chTexteCarte(j3, semSuiv)
+	assert 0, 'So ?'
 
 	noeudsLun = noeudsAyantValeur(semSuiv, 'TEXT', j3)[0]
 
