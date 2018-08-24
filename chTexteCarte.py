@@ -11,7 +11,7 @@ from lxml import etree
 
 from nodes import zoli
 
-def scr(j3, arbre):
+def chTexteCarteAux(j3, arbre):
 	assert not isinstance(arbre, str)
 
 	elements = arbre.findall('.//node')	# XPath, recursive.
@@ -25,13 +25,13 @@ def scr(j3, arbre):
 		if troisPremiers == j3:
 			#	zoli(e, impr = True)
 			l = e.get('LINK')
-			
-			print 'scr() j3 = {}, l = {}'.format(j3, l)
+
+			print 'chTexteCarteAux() j3 = {}, l = {}'.format(j3, l)
 			return
 
 def chTexteCarte(j3, semSuiv):
 	arbre = etree.parse(semSuiv)
-	scr(j3, arbre)
+	chTexteCarteAux(j3, arbre)
 
 if __name__ == '__main__':
 	j3 = 'jeu'
