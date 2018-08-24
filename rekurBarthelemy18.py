@@ -11,14 +11,14 @@ from lxml import etree
 
 from nodes import zoli
 
-def scr(j3, truc):
-	assert not isinstance(truc, str)
-	arbre = etree.parse(semSuiv)
+def scr(j3, arbre):
+	assert not isinstance(arbre, str)
+	
 	elements = arbre.findall('.//node')	# XPath, recursive.
 	#	assert 0, len(elements)
 	for e in elements:
-		#	zoli(e, impr = True)
-
+		zoli(e, impr = True)
+		assert 0
 		scr(j3, e)
 
 def chTexteCarte(j3, semSuiv):
