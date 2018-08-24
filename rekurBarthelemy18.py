@@ -7,6 +7,8 @@ from sys import path
 
 path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/recurre')
 
+from lxml import etree
+
 from nodes import zoli
 
 def chTexteCarte(j3, semSuiv):
@@ -17,3 +19,8 @@ def chTexteCarte(j3, semSuiv):
 		zoli(e, impr = True)
 
 		assert 0, e
+
+if __name__ == '__main__':
+	j3 = 'jeu'
+	semSuiv = "essais-XNextWeek/Sem3518.mm"
+	chTexteCarte(j3, semSuiv)
