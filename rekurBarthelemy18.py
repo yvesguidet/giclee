@@ -11,14 +11,19 @@ from lxml import etree
 
 from nodes import zoli
 
-def chTexteCarte(j3, semSuiv):
+def scr(j3, truc):
+	assert not isinstance(truc, str)
 	arbre = etree.parse(semSuiv)
 	elements = arbre.findall('.//node')	# XPath, recursive.
 	#	assert 0, len(elements)
 	for e in elements:
-		zoli(e, impr = True)
+		#	zoli(e, impr = True)
 
-		assert 0, e
+		scr(j3, e)
+
+def chTexteCarte(j3, semSuiv):
+	arbre = etree.parse(semSuiv)
+	scr(j3, arbre)
 
 if __name__ == '__main__':
 	j3 = 'jeu'
