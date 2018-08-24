@@ -25,7 +25,7 @@ def chTexteCarteAux(j, arbre):
 		t = e.get('TEXT')
 
 		if t == None:
-			return
+			return arbre
 		troisPremiers = t[:3]
 		if troisPremiers == j3:
 			#	zoli(e, impr = True)
@@ -37,11 +37,11 @@ def chTexteCarteAux(j, arbre):
 			##########################
 #	sauveCarte(arbre, c)
 			##########################
-			return
+			return arbre
 
 def chTexteCarte(j3, semSuiv):
 	arbre = etree.parse(semSuiv)
-	chTexteCarteAux(j3, arbre)
+	return chTexteCarteAux(j3, arbre)
 
 if __name__ == '__main__':
 	chTexteCarte('jeu23_sem34', "essais-XNextWeek/Sem3518.mm")

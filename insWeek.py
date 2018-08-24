@@ -175,7 +175,11 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	j3 = cartej3AsString[0:3]
 
-	chTexteCarte(cartej3AsString, semSuiv)
+	nuaz = chTexteCarte(cartej3AsString, semSuiv)
+
+
+	zoli(nuaz, impr = True)
+	sauveCarte(nuaz, semSuiv)
 
 	return
 
