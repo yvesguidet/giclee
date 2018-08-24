@@ -15,7 +15,7 @@ def chTexteCarteAux(j3, arbre):
 	assert not isinstance(arbre, str)
 
 	elements = arbre.findall('.//node')	# XPath, recursive.
-	print len(elements)
+	#	print len(elements)
 	for e in elements:
 		t = e.get('TEXT')
 
@@ -26,7 +26,7 @@ def chTexteCarteAux(j3, arbre):
 			#	zoli(e, impr = True)
 			l = e.get('LINK')
 
-			print 'chTexteCarteAux() j3 = {}, l = {}'.format(j3, l)
+			print '*** chTexteCarteAux() j3 = {}, l = {}'.format(j3, l)
 			return
 
 def chTexteCarte(j3, semSuiv):
