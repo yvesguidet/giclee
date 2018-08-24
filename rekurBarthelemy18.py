@@ -17,13 +17,17 @@ def scr(j3, arbre):
 	elements = arbre.findall('.//node')	# XPath, recursive.
 	print len(elements)
 	for e in elements:
-		#	zoli(e, impr = True)
 		t = e.get('TEXT')
 
 		if t == None:
 			return
 		troisPremiers = t[:3]
-		assert troisPremiers <> j3
+		if troisPremiers == j3:
+			#	zoli(e, impr = True)
+			l = e.get('LINK')
+			
+			print 'scr() j3 = {}, l = {}'.format(j3, l)
+			return
 
 def chTexteCarte(j3, semSuiv):
 	arbre = etree.parse(semSuiv)
