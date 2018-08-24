@@ -11,8 +11,13 @@ from lxml import etree
 
 from nodes import zoli
 
-def chTexteCarteAux(j3, arbre):
+def chTexteCarteAux(j, arbre):
 	assert not isinstance(arbre, str)
+	assert len(j) > 3
+
+	j3 = j[0:3]
+
+	#	assert 0, j3
 
 	elements = arbre.findall('.//node')	# XPath, recursive.
 	#	print len(elements)
@@ -26,7 +31,12 @@ def chTexteCarteAux(j3, arbre):
 			#	zoli(e, impr = True)
 			l = e.get('LINK')
 
-			print '*** chTexteCarteAux() j3 = {}, l = {}'.format(j3, l)
+			print '*** chTexteCarteAux() j3 = {}, l = {}, j = {}'.format(j3, l, j)
+			# tataaaaaaaaaaaaaaaaa
+			e.set('LINK', j)
+			##########################
+#	sauveCarte(arbre, c)
+			##########################
 			return
 
 def chTexteCarte(j3, semSuiv):
@@ -34,6 +44,4 @@ def chTexteCarte(j3, semSuiv):
 	chTexteCarteAux(j3, arbre)
 
 if __name__ == '__main__':
-	j3 = 'jeu'
-	semSuiv = "essais-XNextWeek/Sem3518.mm"
-	chTexteCarte(j3, semSuiv)
+	chTexteCarte('jeu23_sem34', "essais-XNextWeek/Sem3518.mm")

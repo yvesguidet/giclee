@@ -175,7 +175,7 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	j3 = cartej3AsString[0:3]
 
-	chTexteCarte(j3, semSuiv)
+	chTexteCarte(cartej3AsString, semSuiv)
 
 	return
 
