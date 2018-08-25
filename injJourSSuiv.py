@@ -11,8 +11,8 @@ from lxml import etree
 
 from nodes import zoli
 
-def chTexteCarteAux(jour, arbre):
-	'''chTexteCarteAux : injecte jour ds arbre (sem suiv)'''
+def injJourSSuivAux(jour, arbre):
+	'''injJourSSuivAux : injecte jour ds arbre (sem suiv)'''
 	assert not isinstance(arbre, str)
 	assert len(jour) > 3
 
@@ -30,7 +30,7 @@ def chTexteCarteAux(jour, arbre):
 			#	zoli(e, impr = True)
 			l = e.get('LINK')
 
-			print '*** chTexteCarteAux() j3 = {}, l = {}, jour = {}'.format(j3, l, jour)
+			print '*** injJourSSuivAux() j3 = {}, l = {}, jour = {}'.format(j3, l, jour)
 			# tataaaaaaaaaaaaaaaaa
 			e.set('LINK', jour)
 			##########################
@@ -41,7 +41,7 @@ def chTexteCarteAux(jour, arbre):
 def injJourSSuiv(j, semSuiv):
 	'''injJourSSuiv : injecte jour ds sem suiv'''
 	arbre = etree.parse(semSuiv)
-	return chTexteCarteAux(j, arbre)
+	return injJourSSuivAux(j, arbre)
 
 if __name__ == '__main__':
 	injJourSSuiv('jeu23_sem34', "essais-XNextWeek/Sem3518.mm")
