@@ -138,7 +138,7 @@ sys.path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/recurre')
 
 from nodes import zoli
 
-from chTexteCarte import chTexteCarte
+from injJourSSuiv import injJourSSuiv
 
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
@@ -165,7 +165,7 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	j3 = cartej3AsString[0:3]
 
-	semSuivAsTree = chTexteCarte(cartej3AsString, semSuiv)
+	semSuivAsTree = injJourSSuiv(cartej3AsString, semSuiv)
 
 
 	zoli(semSuivAsTree, impr = True)

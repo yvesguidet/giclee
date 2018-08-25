@@ -11,13 +11,12 @@ from lxml import etree
 
 from nodes import zoli
 
-def chTexteCarteAux(j, arbre):
+def chTexteCarteAux(jour, arbre):
+	'''chTexteCarteAux : injecte jour ds arbre (sem suiv)'''
 	assert not isinstance(arbre, str)
-	assert len(j) > 3
+	assert len(jour) > 3
 
-	j3 = j[0:3]
-
-	#	assert 0, j3
+	j3 = jour[0:3]
 
 	elements = arbre.findall('.//node')	# XPath, recursive.
 	#	print len(elements)
@@ -31,17 +30,18 @@ def chTexteCarteAux(j, arbre):
 			#	zoli(e, impr = True)
 			l = e.get('LINK')
 
-			print '*** chTexteCarteAux() j3 = {}, l = {}, j = {}'.format(j3, l, j)
+			print '*** chTexteCarteAux() j3 = {}, l = {}, jour = {}'.format(j3, l, jour)
 			# tataaaaaaaaaaaaaaaaa
-			e.set('LINK', j)
+			e.set('LINK', jour)
 			##########################
 #	sauveCarte(arbre, c)
 			##########################
 			return arbre
 
-def chTexteCarte(j3, semSuiv):
+def injJourSSuiv(j, semSuiv):
+	'''injJourSSuiv : injecte jour ds sem suiv'''
 	arbre = etree.parse(semSuiv)
-	return chTexteCarteAux(j3, arbre)
+	return chTexteCarteAux(j, arbre)
 
 if __name__ == '__main__':
-	chTexteCarte('jeu23_sem34', "essais-XNextWeek/Sem3518.mm")
+	injJourSSuiv('jeu23_sem34', "essais-XNextWeek/Sem3518.mm")
