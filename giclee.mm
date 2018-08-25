@@ -57,7 +57,9 @@
 <node CREATED="1535097966632" ID="ID_1682728963" MODIFIED="1535097979081" TEXT="vendredi 24 ao&#xfb;t 2018, 09:43:03 (UTC+0200)">
 <cloud/>
 </node>
-<node CREATED="1535097966632" ID="ID_700832248" MODIFIED="1535172494108" TEXT="chTexteCarte : renommer injJourSSuiv et effectuer la subst"/>
+<node CREATED="1535097966632" ID="ID_700832248" MODIFIED="1535172822245" TEXT="chTexteCarte : renommer injJourSSuiv et effectuer la subst">
+<icon BUILTIN="button_ok"/>
+</node>
 <node CREATED="1535097966632" ID="ID_1882759136" LINK="/home/yves/2011/dev/Python/outils/giclee/giclee-dev/rebelotte" MODIFIED="1535097966632" TEXT="dir"/>
 </node>
 </node>
