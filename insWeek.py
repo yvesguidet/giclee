@@ -140,16 +140,6 @@ from nodes import zoli
 
 from chTexteCarte import chTexteCarte
 
-#	def chTexteCarte(j3, semSuiv):
-#		arbre = etree.parse(semSuiv)
-#		elements = arbre.findall('.//node')	# XPath, recursive.
-#		#	assert 0, len(elements)
-#		for e in elements:
-#			zoli(e, impr = True)
-#
-#			assert 0, e
-
-
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
 
