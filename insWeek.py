@@ -146,9 +146,9 @@ from chTexteCarte import chTexteCarte
 #		#	assert 0, len(elements)
 #		for e in elements:
 #			zoli(e, impr = True)
-#	
+#
 #			assert 0, e
-	
+
 
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
@@ -175,22 +175,10 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	j3 = cartej3AsString[0:3]
 
-	nuaz = chTexteCarte(cartej3AsString, semSuiv)
+	semSuivAsTree = chTexteCarte(cartej3AsString, semSuiv)
 
 
-	zoli(nuaz, impr = True)
-	sauveCarte(nuaz, semSuiv)
+	zoli(semSuivAsTree, impr = True)
+	sauveCarte(semSuivAsTree, semSuiv)
 
 	return
-
-	assert 0, 'So ?'
-
-	noeudsLun = noeudsAyantValeur(semSuiv, 'TEXT', j3)[0]
-
-	assert 0, type(noeudsLun)
-
-	eltJour3 = noeudsLun[0]
-
-	eltJour3.set('LINK', cartej3AsString)
-
-	sauveCarte(arbreSemSuiv, semSuiv)
