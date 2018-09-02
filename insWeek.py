@@ -143,11 +143,6 @@ from injJourSSuiv import injJourSSuiv
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
 
-	#	assert 0, repertoire
-
-	#	sys.path.append('/home/yves/2011/dev/Python/XCartes/XNoeud/nodes-dev/')
-
-
 	n = numSemCour()
 
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
