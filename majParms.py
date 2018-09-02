@@ -23,7 +23,8 @@ def majParms():
 					'May' : 'mai',
 					'Jun' : 'juin',
 					'Jul' : 'juillet',
-					'Aug' : 'août'}
+					'Aug' : 'août',
+					'Sep' : 'septembre'}
 	mois = moisFrancais[mois]
 
 	nbJours = {	'novembre': 30,
@@ -83,10 +84,10 @@ def majParms():
 	jourS = jourSem()
 
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
-	
+
 	print  "nbJMois = {}".format(nbJMois)
 	print  "quantiemeDuLundi = {}".format(quantiemeDuLundi)
-	
+
 	if quantiemeDuLundi > nbJMois:
 		quantiemeDuLundi -= nbJMois
 
