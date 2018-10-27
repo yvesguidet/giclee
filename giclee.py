@@ -48,8 +48,6 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	from sys import path
 
-	path.append('/home/yves/2011/dev/Python/outils/jourSem')
-	from jourSem import jourSem
 	import time
 	ati = time.asctime()
 
