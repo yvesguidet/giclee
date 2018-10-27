@@ -79,8 +79,7 @@ def majParms():
 	params = open('/home/yves/2011/dev/Python/outils/giclee/params.py', "w")
 
 
-	path.append('/home/yves/2011/dev/Python/outils/jourSem')
-	from jourSem import nbJoursDIciLundi
+	from sys import path
 
 	d = datetime.date.today()	# auj
 	# jour numérique
@@ -90,9 +89,23 @@ def majParms():
 	jourS = ['lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim'][jn - 1]
 
 	print 'jourS = {}'.format(jourS)
-	print 'jourS = {}'.format(jourS)
 
-	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
+	from sys import path
+	path.append('/home/yves/2011/2018/automne/cartes/giclee/XNextWeek/giclee/lundis')
+	
+	from ls import ls
+
+	import datetime
+
+	d = datetime.date.today()	# auj
+
+	lundi = ls(d)
+	print 'postTraitCHebdo.py : lundi = {}'.format(lundi)
+
+	print 'postTraitCHebdo.py : d = {}'.format(d)
+
+	quantiemeDuLundi = int(str(lundi).split('-')[2])
+	print 'postTraitCHebdo.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 
 	print  "nbJMois = {}".format(nbJMois)
 	print  "quantiemeDuLundi = {}".format(quantiemeDuLundi)
