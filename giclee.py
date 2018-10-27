@@ -54,6 +54,23 @@ for (increment, jour3lettres) in enumerate (jours):
 	ati = time.asctime()
 
 	quantieme2Day = str.split(ati)[2]
+
+	path.append('/home/yves/2011/2018/automne/cartes/giclee/XNextWeek/giclee/lundis')
+	from ls import ls
+
+	import datetime
+
+	d = datetime.date.today()	# auj
+
+	lundi = ls(d)
+
+	print 'giclee.py : d = {}'.format(d)
+
+	quantiemeDuLundi = str(lundi).split('-')[2]
+	print 'giclee.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
+
+	assert 0, 'OK ?'
+
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
 
 	nbJMois = params.nbJMois
