@@ -80,9 +80,17 @@ def majParms():
 
 
 	path.append('/home/yves/2011/dev/Python/outils/jourSem')
-	from jourSem import jourSem, nbJoursDIciLundi
+	from jourSem import nbJoursDIciLundi
 
-	jourS = jourSem()
+	d = datetime.date.today()	# auj
+	# jour numérique
+	jn = d.isocalendar()[2]
+	print 'ls : jn = {}'.format(jn)
+	# jour symbolique
+	jourS = ['lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim'][jn - 1]
+
+	print 'jourS = {}'.format(jourS)
+	print 'jourS = {}'.format(jourS)
 
 	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
 
