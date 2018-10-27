@@ -49,7 +49,7 @@ for (increment, jour3lettres) in enumerate (jours):
 	from sys import path
 
 	path.append('/home/yves/2011/dev/Python/outils/jourSem')
-	from jourSem import jourSem, nbJoursDIciLundi
+	from jourSem import jourSem
 	import time
 	ati = time.asctime()
 
@@ -66,12 +66,8 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	print 'giclee.py : d = {}'.format(d)
 
-	quantiemeDuLundi = str(lundi).split('-')[2]
+	quantiemeDuLundi = int(str(lundi).split('-')[2])
 	print 'giclee.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
-
-	assert 0, 'OK ?'
-
-	quantiemeDuLundi = int(quantieme2Day) + nbJoursDIciLundi() # samedi 25 février 2017, 07:04:06 (UTC+0100)
 
 	nbJMois = params.nbJMois
 
