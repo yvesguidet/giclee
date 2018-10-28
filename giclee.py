@@ -62,13 +62,23 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	lundi = ls(d)
 
-	print 'giclee.py : d = {}'.format(d)
+	print 'giclee.py : lundi = {}'.format(lundi)
+	m = int(str(lundi).split('-')[1])
+	print 'giclee.py : m = {}'.format(m)
+
+	import lundis
+
+	nbJMois = lundis.nbJMois(m)
+	print 'giclee.py : nbJMois = {}'.format(nbJMois)
 
 	quantiemeDuLundi = int(str(lundi).split('-')[2])
 	print 'giclee.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 
-	nbJMois = params.nbJMois
+	#	nbJMois = params.nbJMois
 
+	print 'giclee.py : nbJMois = {}'.format(nbJMois)
+
+	#	assert 0
 	if quantiemeDuLundi > nbJMois:
 		quantiemeDuLundi -= nbJMois
 
