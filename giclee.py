@@ -90,7 +90,7 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	#	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
 
-	sem = int(datetime.date.today().isocalendar()[1])
+	sem = int(datetime.date.today().isocalendar()[1]) + 1
 	
 	print 'giclee.py : sem = {}'.format(sem)
 
