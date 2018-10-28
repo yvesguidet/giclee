@@ -74,8 +74,6 @@ for (increment, jour3lettres) in enumerate (jours):
 	quantiemeDuLundi = int(str(lundi).split('-')[2])
 	print 'giclee.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 
-	#	nbJMois = params.nbJMois
-
 	print 'giclee.py : nbJMois = {}'.format(nbJMois)
 
 	#	assert 0
@@ -92,8 +90,10 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	#	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
 
-	sem = int(str(datetime.date.today()).split('-')[1])	# auj
+	sem = int(datetime.date.today().isocalendar()[1])
+	
 	print 'giclee.py : sem = {}'.format(sem)
+
 	carteACreer = "{}{}_sem{}".format(jour3lettres, quantieme, sem)
 
 	print 'blouk : carteACreer = {}'.format(carteACreer)
