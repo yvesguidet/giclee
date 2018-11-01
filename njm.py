@@ -66,3 +66,6 @@ def nz(m, j, a, d):
 
 if  __name__ == '__main__':
 	print njm(11, 2018)
+	print njm(10, 2018)
+	print njm(2, 2018)
+	print njm(22, 2018)
