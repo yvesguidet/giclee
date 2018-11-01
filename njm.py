@@ -11,10 +11,6 @@ def njm(m, a = 2018):
 	import datetime
 	from ls import dem1
 	d = datetime.date.today()	# auj
-	a = int(str(d).split('-')[0])
-	print 'a = {}'.format(a)
-	print 'type(a) = {}'.format(type(a))
-	assert m != 12
 	d = d.replace(month = m, year = a, day = 28)
 	#	print 'd = {}'.format(d)
 
@@ -42,12 +38,15 @@ def njm(m, a = 2018):
 
 def nz(m, j, a, d):
 	''' aux njm'''
-	bavard = False
+	bavard = 0
 
 	if bavard:
 		print 'nz : m = {}'.format(m)
 		print 'nz : j = {}'.format(j)
 		print 'nz : d = {}'.format(d)
+
+	if m == 12:
+		return 31 # palliatif bug dem1
 	
 	from ls import dem1
 	d = dem1(d)
@@ -69,7 +68,7 @@ def nz(m, j, a, d):
 	
 
 if  __name__ == '__main__':
-	#	print njm(11, 2018)
-	#	print njm(10, 2018)
-	#	print njm(2, 2018)
 	print njm(12, 2018)
+	print njm(11, 2018)
+	print njm(10, 2018)
+	print njm(2, 2018)
