@@ -98,12 +98,25 @@ for (increment, jour3lettres) in enumerate (jours):
 		print 'giclee : increment = {}'.format(increment)
 
 	quantiemeDuLundi = datetime.date.today()	# auj
+	dd = d
 	d = int(str(ls(d)).split('-')[2])
 	print 'd = {}'.format(d)
 	print 'type(d) = {}'.format(type(d))
 
 	assert isinstance(d, int)
 
+	z = params.nbJMois
+	print 'z = {}'.format(z)
+
+	m = int(str(dd).split('-')[1])
+	print 'm = {}'.format(m)
+	print 'type(m) = {}'.format(type(m))
+
+	from njm import njm
+
+	z = njm(m)
+	print 'z = {}'.format(z)
+	assert 0, 'finir'
 	if d > params.nbJMois:
 		d = 1
 	from sys import path
