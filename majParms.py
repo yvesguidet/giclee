@@ -12,6 +12,7 @@ locale.setlocale(locale.LC_ALL, ('fr', 'utf-8'))
 
 def majParms():
 	ati = time.asctime()
+	#	assert 0, 'majParms : ati = {}'.format(ati)
 
 	quantieme2Day = str.split(ati)[2]
 
@@ -25,7 +26,8 @@ def majParms():
 					'Jul' : 'juillet',
 					'Aug' : 'août',
 					'Sep' : 'septembre',
-					'Oct' : 'octobre'}
+					'Oct' : 'octobre',
+					'Nov' : 'novembre'}
 	mois = moisFrancais[mois]
 
 	nbJours = {	'novembre': 30,
