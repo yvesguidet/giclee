@@ -80,15 +80,11 @@ for (increment, jour3lettres) in enumerate (jours):
 	if quantiemeDuLundi > nbJMois:
 		quantiemeDuLundi -= nbJMois
 
-	# carteACreer = str(increment + quantiemeDuLundi) + '_sem' + params.sem
-
 	quantieme = increment + quantiemeDuLundi
 	if quantieme > 31:	# juillet
 		quantieme -= 31
 
 		print 'quantieme = {}'.format(quantieme)
-
-	#	carteACreer = "{}{}_sem{}".format(jour3lettres, increment + quantiemeDuLundi, params.sem)
 
 	sem = int(datetime.date.today().isocalendar()[1]) + 1
 	
@@ -101,6 +97,7 @@ for (increment, jour3lettres) in enumerate (jours):
 	if jour3lettres != 'lun' and debourre:
 		print 'giclee : increment = {}'.format(increment)
 
+	assert 0, params.quantiemeDuLundi
 	if params.quantiemeDuLundi > params.nbJMois:
 		params.quantiemeDuLundi = 1
 	from sys import path
