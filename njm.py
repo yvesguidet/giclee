@@ -12,12 +12,12 @@ def njm(m, a = 2018):
 	from ls import dem1
 	d = datetime.date.today()	# auj
 	d = d.replace(month = m, year = a, day = 28)
-	print 'd = {}'.format(d)
+	#	print 'd = {}'.format(d)
 
 	j = int(str(d).split('-')[2])
-	print 'j = {}'.format(j)
+	#	print 'j = {}'.format(j)
 	mm = int(str(d).split('-')[1])
-	print 'mm = {}'.format(mm)
+	#	print 'mm = {}'.format(mm)
 	return nz(m, j, a, d)
 #		while 1:
 #			d = dem1(d)
@@ -37,22 +37,30 @@ def njm(m, a = 2018):
 	assert 0, 'finir'
 
 def nz(m, j, a, d):
-	print 'nz : m = {}'.format(m)
-	print 'nz : j = {}'.format(j)
-	print 'nz : d = {}'.format(d)
+	''' aux njm'''
+	bavard = False
+
+	if bavard:
+		print 'nz : m = {}'.format(m)
+		print 'nz : j = {}'.format(j)
+		print 'nz : d = {}'.format(d)
 	
 	from ls import dem1
 	d = dem1(d)
 
-	print 'nz : d = {}'.format(d)
+	if bavard:
+		print 'nz : d = {}'.format(d)
 	mm = int(str(d).split('-')[1])
-	print 'mm = {}'.format(mm)
+	if bavard:
+		print 'mm = {}'.format(mm)
 
 	if m != mm:
 		return j
 
 	jj = int(str(d).split('-')[2])
-	print 'jj = {}'.format(jj)
+	if bavard:
+		print 'jj = {}'.format(jj)
+
 	return nz(m, jj, a, d)
 	
 
