@@ -48,11 +48,12 @@ def nz(m, j, a, d):
 	mm = int(str(d).split('-')[1])
 	print 'mm = {}'.format(mm)
 
-	assert m == mm
+	if m != mm:
+		return j
+
 	jj = int(str(d).split('-')[2])
 	print 'jj = {}'.format(jj)
 	return nz(m, jj, a, d)
-	assert 0, 'récurre ?'
 	
 
 if  __name__ == '__main__':
