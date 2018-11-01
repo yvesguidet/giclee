@@ -16,7 +16,7 @@ majParms.majParms()
 from sys import path
 path.append('giclee')
 
-import params
+#	import params
 
 oct = '_'	# mieux que '-' pour modif
 # lundi 16 octobre 2017, 09:45:42 (UTC+0200)
@@ -105,19 +105,16 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	assert isinstance(d, int)
 
-	z = params.nbJMois
-	print 'z = {}'.format(z)
-
 	m = int(str(dd).split('-')[1])
 	print 'm = {}'.format(m)
 	print 'type(m) = {}'.format(type(m))
 
 	from njm import njm
 
-	z = njm(m)
-	print 'z = {}'.format(z)
-	assert 0, 'finir'
-	if d > params.nbJMois:
+	nbJMois = njm(m)
+	print 'nbJMois = {}'.format(nbJMois)
+
+	if d > nbJMois:
 		d = 1
 	from sys import path
 	path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/giclee/pyNewMap')
