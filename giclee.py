@@ -97,9 +97,15 @@ for (increment, jour3lettres) in enumerate (jours):
 	if jour3lettres != 'lun' and debourre:
 		print 'giclee : increment = {}'.format(increment)
 
-	assert 0, params.quantiemeDuLundi
-	if params.quantiemeDuLundi > params.nbJMois:
-		params.quantiemeDuLundi = 1
+	d = datetime.date.today()	# auj
+	d = int(str(ls(d)).split('-')[2])
+	print 'd = {}'.format(d)
+	print 'type(d) = {}'.format(type(d))
+
+	assert isinstance(d, int)
+
+	if d > params.nbJMois:
+		d = 1
 	from sys import path
 	path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/giclee/pyNewMap')
 	import newMap
