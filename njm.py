@@ -3,19 +3,57 @@
 
 def njm(m, a = 2018):
 	'''nb jours du mois'''
+
+	#
+	from sys import path
+	path.append('/home/yves/2011/2018/automne/cartes/giclee/XNextWeek/giclee/lundis')
 	#
 	import datetime
+	from ls import dem1
 	d = datetime.date.today()	# auj
 	d = d.replace(month = m, year = a, day = 28)
 	print 'd = {}'.format(d)
-	assert 0, 'use replace ok ?'
 
-	while 1:
-		d = dem1(d)
-		print 'd = {}'.format(d)
-		print 'type(d) = {}'.format(type(d))
-		assert 0, 'finir'
+	j = int(str(d).split('-')[2])
+	print 'j = {}'.format(j)
+	mm = int(str(d).split('-')[1])
+	print 'mm = {}'.format(mm)
+	return nz(m, j, a, d)
+#		while 1:
+#			d = dem1(d)
+#			#	print 'd = {}'.format(d)
+#			#	print 'type(d) = {}'.format(type(d))
+#
+#			mm = int(str(d).split('-')[1])
+#			print 'mm = {}'.format(mm)
+#
+#			jj = int(str(d).split('-')[2])
+#			print 'jj = {}'.format(jj)
+#
+#			jj = int(str(d).split('-')[2])
+#			print 'jj = {}'.format(jj)
+#			assert m == mm
+
 	assert 0, 'finir'
+
+def nz(m, j, a, d):
+	print 'nz : m = {}'.format(m)
+	print 'nz : j = {}'.format(j)
+	print 'nz : d = {}'.format(d)
+	
+	from ls import dem1
+	d = dem1(d)
+
+	print 'nz : d = {}'.format(d)
+	mm = int(str(d).split('-')[1])
+	print 'mm = {}'.format(mm)
+
+	assert m == mm
+	jj = int(str(d).split('-')[2])
+	print 'jj = {}'.format(jj)
+	return nz(m, jj, a, d)
+	assert 0, 'récurre ?'
+	
 
 if  __name__ == '__main__':
 	print njm(11, 2018)
