@@ -10,8 +10,8 @@ from insWeek import jours
 
 import os
 
-import majParms
-majParms.majParms()
+#	import majParms
+#	majParms.majParms()
 
 from sys import path
 path.append('giclee')
