@@ -117,7 +117,7 @@ for (increment, jour3lettres) in enumerate (jours):
 	if d > nbJMois:
 		d = 1
 	from sys import path
-	path.append('/home/yves/2011/dev/Python/outils/mmNextWeek/giclee/pyNewMap')
+	path.append('/home/yves/2011/dev/Python/outils/pyNewMap')
 	import newMap
 
 	carteACreer += '.mm'
