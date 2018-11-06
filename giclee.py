@@ -62,19 +62,24 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	lundi = ls(d)
 
-	print 'giclee.py : lundi = {}'.format(lundi)
+	if False:
+		print 'giclee.py : lundi = {}'.format(lundi)
 	m = int(str(lundi).split('-')[1])
-	print 'giclee.py : m = {}'.format(m)
+	if False:
+		print 'giclee.py : m = {}'.format(m)
 
 	import lundis
 
 	nbJMois = lundis.nbJMois(m)
-	print 'giclee.py : nbJMois = {}'.format(nbJMois)
+	if False:
+		print 'giclee.py : nbJMois = {}'.format(nbJMois)
 
 	quantiemeDuLundi = int(str(lundi).split('-')[2])
-	print 'giclee.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
+	if False:
+		print 'giclee.py : quantiemeDuLundi = {}'.format(quantiemeDuLundi)
 
-	print 'giclee.py : nbJMois = {}'.format(nbJMois)
+	if False:
+		print 'giclee.py : nbJMois = {}'.format(nbJMois)
 
 	#	assert 0
 	if quantiemeDuLundi > nbJMois:
@@ -84,35 +89,44 @@ for (increment, jour3lettres) in enumerate (jours):
 	if quantieme > 31:	# juillet
 		quantieme -= 31
 
-		print 'quantieme = {}'.format(quantieme)
+		if False:
+			print 'quantieme = {}'.format(quantieme)
 
 	sem = int(datetime.date.today().isocalendar()[1]) + 1
 
-	print 'giclee.py : sem = {}'.format(sem)
+	if False:
+		print 'giclee.py : sem = {}'.format(sem)
 
 	carteACreer = "{}{}_sem{}".format(jour3lettres, quantieme, sem)
 
-	print 'blouk : carteACreer = {}'.format(carteACreer)
+	if False:
+		print 'blouk : carteACreer = {}'.format(carteACreer)
 
 	if jour3lettres != 'lun' and debourre:
-		print 'giclee : increment = {}'.format(increment)
+		if False:
+			print 'giclee : increment = {}'.format(increment)
 
 	quantiemeDuLundi = datetime.date.today()	# auj
 	dd = d
 	d = int(str(ls(d)).split('-')[2])
-	print 'd = {}'.format(d)
-	print 'type(d) = {}'.format(type(d))
+	if False:
+		print 'd = {}'.format(d)
+	if False:
+		print 'type(d) = {}'.format(type(d))
 
 	assert isinstance(d, int)
 
 	m = int(str(dd).split('-')[1])
-	print 'm = {}'.format(m)
-	print 'type(m) = {}'.format(type(m))
+	if False:
+		print 'm = {}'.format(m)
+	if False:
+		print 'type(m) = {}'.format(type(m))
 
 	from njm import njm
 
 	nbJMois = njm(m)
-	print 'nbJMois = {}'.format(nbJMois)
+	if False:
+		print 'nbJMois = {}'.format(nbJMois)
 
 	if d > nbJMois:
 		d = 1

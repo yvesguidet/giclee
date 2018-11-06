@@ -30,7 +30,8 @@ def injJourSSuivAux(jour, arbre):
 			#	zoli(e, impr = True)
 			l = e.get('LINK')
 
-			print '*** injJourSSuivAux() j3 = {}, l = {}, jour = {}'.format(j3, l, jour)
+			if False:
+				print '*** injJourSSuivAux() j3 = {}, l = {}, jour = {}'.format(j3, l, jour)
 			# tataaaaaaaaaaaaaaaaa
 			e.set('LINK', jour)
 			##########################
