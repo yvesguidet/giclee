@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-prod = True
-
 jours = ('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim')
 
 from lxml import etree
@@ -163,7 +161,7 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	semSuivAsTree = injJourSSuiv(cartej3AsString, semSuiv)
 
 
-	zoli(semSuivAsTree, impr = True)
+	#	zoli(semSuivAsTree, impr = True)
 	sauveCarte(semSuivAsTree, semSuiv)
 
 	return
