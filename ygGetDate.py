@@ -10,4 +10,5 @@ def laDate():
 	temp = commands.getoutput(dothis)
 	return temp
 
-#	print laDate()
+if __name__ == '__main__':
+	print laDate()
