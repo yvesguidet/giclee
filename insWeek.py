@@ -17,6 +17,9 @@ import datetime
 def numSemCour():
 	return datetime.date.today().isocalendar()[1]
 
+def annee2chiffres():
+	return datetime.date.today().isocalendar()[0] - 2000
+
 def insLend(c, d):
 	'''ins. lendemain'''
 	nomLong = os.path.join(d, c)
@@ -119,7 +122,9 @@ def insWeek(c, d):
 
 	nsc =  numSemCour()
 
-	semSuiv = 'Sem{}18.mm'.format(nsc + 1)
+	a = annee2chiffres()
+
+	semSuiv = 'Sem{}{}.mm'.format(nsc + 1, a)
 
 	verrue.set('LINK', semSuiv)
 
