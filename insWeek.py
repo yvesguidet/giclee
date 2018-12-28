@@ -152,7 +152,11 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	import datetime
 	numSemSuiv =  n + 1
-	semSuiv = 'Sem{}18.mm'.format(numSemSuiv)
+	if n != 52:
+		semSuiv = 'Sem{}18.mm'.format(numSemSuiv)
+	else:
+		numSemSuiv = 1
+		semSuiv = 'Sem{:02d}19.mm'.format(numSemSuiv)
 
 	import os
 

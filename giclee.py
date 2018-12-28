@@ -93,13 +93,15 @@ for (increment, jour3lettres) in enumerate (jours):
 			print 'quantieme = {}'.format(quantieme)
 
 	sem = int(datetime.date.today().isocalendar()[1]) + 1
+	if sem == 53:
+		sem = 1
 
-	if False:
+	if True:
 		print 'giclee.py : sem = {}'.format(sem)
 
-	carteACreer = "{}{}_sem{}".format(jour3lettres, quantieme, sem)
+	carteACreer = "{}{}_sem{:02}".format(jour3lettres, quantieme, sem)
 
-	if False:
+	if True:
 		print 'blouk : carteACreer = {}'.format(carteACreer)
 
 	if jour3lettres != 'lun' and debourre:
