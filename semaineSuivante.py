@@ -10,8 +10,8 @@ import datetime
 def lundiDernier():
 	''' lundi dernier '''
 	today = datetime.date.today()
-	blonde19 = today + datetime.timedelta(days = -today.weekday(), weeks = 0)
-	return blonde19
+	ld = today + datetime.timedelta(days = -today.weekday(), weeks = 0)
+	return ld
 
 def lundiProchain():
 	''' lundi prochain '''
