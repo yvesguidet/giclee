@@ -7,6 +7,12 @@
 
 import datetime
 
+def lundiDernier():
+	''' lundi dernier '''
+	today = datetime.date.today()
+	blonde19 = today + datetime.timedelta(days = -today.weekday(), weeks = 0)
+	return blonde19
+
 def lundiProchain():
 	''' lundi prochain '''
 	today = datetime.date.today()
@@ -17,4 +23,5 @@ def lundiProchain():
 if  __name__ == '__main__':
 
 	print 'semaineSuivante : lundiProchain = {}'.format(lundiProchain())
+	print 'semaineSuivante : lundiDernier = {}'.format(lundiDernier())
 
