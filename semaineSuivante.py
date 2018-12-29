@@ -16,5 +16,5 @@ def lundiProchain():
 
 if  __name__ == '__main__':
 
-	print 'ss : lundiProchain = {}'.format(lundiProchain())
+	print 'semaineSuivante : lundiProchain = {}'.format(lundiProchain())
 
