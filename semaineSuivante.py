@@ -7,6 +7,12 @@
 
 import datetime
 
+def dem1():
+	''' '''
+	today = datetime.date.today()
+	d = today + datetime.timedelta(days = 1, weeks = 0)
+	assert 0, d
+
 def lundiDernier():
 	''' lundi dernier '''
 	today = datetime.date.today()
@@ -24,4 +30,5 @@ if  __name__ == '__main__':
 
 	print 'semaineSuivante : lundiProchain = {}'.format(lundiProchain())
 	print 'semaineSuivante : lundiDernier = {}'.format(lundiDernier())
+	print 'semaineSuivante : dem1 = {}'.format(dem1())
 
