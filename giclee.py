@@ -94,11 +94,12 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	from bugGicl import dirCartes, carteHebdo
 
-	zob = numSemCour()
-	zob = carteHebdo(zob)
-	assert 0, zob
+	sem = numSemCour() + 1
 
-	sem = int(datetime.date.today().isocalendar()[1]) + 1
+	sem = carteHebdo(sem)
+
+	assert 0, 'finir sem = {}'.format(sem)
+
 	if sem == 53:
 		sem = 1
 
