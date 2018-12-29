@@ -92,6 +92,12 @@ for (increment, jour3lettres) in enumerate (jours):
 		if False:
 			print 'quantieme = {}'.format(quantieme)
 
+	from bugGicl import dirCartes, carteHebdo
+
+	zob = numSemCour()
+	zob = carteHebdo(zob)
+	assert 0, zob
+
 	sem = int(datetime.date.today().isocalendar()[1]) + 1
 	if sem == 53:
 		sem = 1
