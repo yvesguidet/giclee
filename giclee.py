@@ -35,7 +35,7 @@ os.mkdir(dirtest)
 ici= os.getcwd()
 os.chdir(dirtest)
 
-from insWeek import insWeek, insVeille, insLend, majLienDsSuiv, numSemCour
+from insWeek import insWeek, insVeille, insLend, majLienDsSuiv
 
 for (increment, jour3lettres) in enumerate (jours):
 	if debourre:
@@ -54,13 +54,16 @@ for (increment, jour3lettres) in enumerate (jours):
 	quantieme2Day = str.split(ati)[2]
 
 	path.append('/home/yves/2011/2018/automne/cartes/giclee/XNextWeek/giclee/lundis')
-	from ls import ls
+	#	from ls import ls
 
 	import datetime
 
 	d = datetime.date.today()	# auj
+#
+	from semaineSuivante import lundiProchain
 
-	lundi = ls(d)
+	#	lundi = ls(d)
+	lundi = lundiProchain()
 
 	if False:
 		print 'giclee.py : lundi = {}'.format(lundi)
@@ -92,7 +95,7 @@ for (increment, jour3lettres) in enumerate (jours):
 		if False:
 			print 'quantieme = {}'.format(quantieme)
 
-	from bugGicl import dirCartes, carteHebdo
+	from bugGicl import dirCartes, carteHebdo, numSemCour
 
 	sem = numSemCour() + 1
 
