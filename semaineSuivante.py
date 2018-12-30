@@ -30,13 +30,20 @@ if  __name__ == '__main__':
 	#	print 'semaineSuivante : lundiProchain = {}'.format(lundiProchain())
 	#	print 'semaineSuivante : lundiDernier = {}'.format(lundiDernier())
 	#	print 'semaineSuivante : dem1 = {}'.format(dem1())
-	l = lundiDernier()
-	for d in range(7):
-		print 'semaineSuivante : dem1 = {}'.format(dem1(l))
-		l = dem1(l)
-	print # une ligne pour aérer
+#	l = lundiDernier()
+#	for d in range(7):
+#		print 'semaineSuivante : dem1 = {}'.format(dem1(l))
+#		l = dem1(l)
+#	print # une ligne pour aérer
 	l = lundiProchain()
 	for d in range(7):
-		print 'semaineSuivante : dem1 = {}'.format(l)
+		print 'semaineSuivante : dem1 = {}'.format(l),
+##
+		from insWeek import numSemCour, annee2chiffres
+#def numSemCour(d = datetime.date.today()):
+#def annee2chiffres(d = datetime.date.today()):
+##
+		print 'sem = {}'.format(numSemCour(l)),
+		print 'an = {}'.format(annee2chiffres(l))
 		l = dem1(l)
 
