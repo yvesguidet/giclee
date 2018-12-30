@@ -97,11 +97,13 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	from bugGicl import dirCartes, carteHebdo, numSemCour
 
-	sem = numSemCour() + 1
+	sem = numSemCour() + 1	#	naaaaaaaaaaaaaaaaan
+	bl19 = lundiProchain()
+	bl19 = numSemCour(bl19)
 
-	sem = carteHebdo(sem)
+	bl19 = carteHebdo(bl19)
 
-	assert 0, 'finir sem = {}'.format(sem)
+	assert 0, 'finir bl19 = {}'.format(bl19)
 
 	if sem == 53:
 		sem = 1
