@@ -17,8 +17,8 @@ import datetime
 def numSemCour():
 	return datetime.date.today().isocalendar()[1]
 
-def annee2chiffres():
-	return datetime.date.today().isocalendar()[0] - 2000
+def annee2chiffres(d = datetime.date.today()):
+	return d.isocalendar()[0] - 2000
 
 def insLend(c, d):
 	'''ins. lendemain'''
