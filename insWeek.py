@@ -50,6 +50,7 @@ def insLend(c, d):
 	#	assert 0, (c, d)
 
 def lend(c, d):
+	assert 0, (c, d)
 	trwa = c[:3]
 
 	i = jours.index(trwa)
