@@ -103,7 +103,7 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	bl19 = carteHebdo(bl19)
 
-	assert 0, 'finir bl19 = {}'.format(bl19)
+	print 'giclee.py : bl19 = {}'.format(bl19)
 
 	if sem == 53:
 		sem = 1
@@ -115,6 +115,7 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	if True:
 		print 'blouk : carteACreer = {}'.format(carteACreer)
+	#	assert 0, 'finir'
 
 	if jour3lettres != 'lun' and debourre:
 		if False:
@@ -122,6 +123,7 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	quantiemeDuLundi = datetime.date.today()	# auj
 	dd = d
+	assert 0, (d, type(d))
 	d = int(str(ls(d)).split('-')[2])
 	if False:
 		print 'd = {}'.format(d)
