@@ -119,24 +119,34 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	if jour3lettres != 'lun' and debourre:
 		if False:
-			print 'giclee : increment = {}'.format(increment)
+			print 'blouk : increment = {}'.format(increment)
 
 	quantiemeDuLundi = datetime.date.today()	# auj
 	dd = d
-	assert 0, (d, type(d))
-	d = int(str(ls(d)).split('-')[2])
-	if False:
+	
+#	/media/home/yves/2011/dev/Python/outils/giclee/semaineSuivante.py
+#	def dem1(d = datetime.date.today()):
+#	def lundiDernier():
+#	def lundiProchain():
+	
+	d = lundiProchain()
+	print 'blouk : (d, type(d)) = {}'.format((d, type(d)))
+	d = int(str(d).split('-')[2])	# quantième lundi proch.
+	
+	if True:
 		print 'd = {}'.format(d)
-	if False:
+	if True:
 		print 'type(d) = {}'.format(type(d))
 
 	assert isinstance(d, int)
-
-	m = int(str(dd).split('-')[1])
-	if False:
+	
+	m = int(str(dd).split('-')[1])	# le mois (de 1 à 12)
+	if True:
 		print 'm = {}'.format(m)
-	if False:
+	if True:
 		print 'type(m) = {}'.format(type(m))
+	
+	assert 0, m
 
 	from njm import njm
 
