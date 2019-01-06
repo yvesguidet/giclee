@@ -50,7 +50,6 @@ def insLend(c, d):
 	#	assert 0, (c, d)
 
 def lend(c, d):
-	assert 0, (c, d)
 	trwa = c[:3]
 
 	i = jours.index(trwa)
@@ -155,18 +154,15 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	numSemSuiv =  n + 1
 	if n != 52:
 		semSuiv = 'Sem{:02d}18.mm'.format(numSemSuiv)
-		assert 0, semSuiv
 	else:
 		numSemSuiv = 1
-		semSuiv = 'Sem{:02d}19.mm'.format(numSemSuiv)
+	semSuiv = 'Sem{:02d}19.mm'.format(numSemSuiv)
 
 	import os
 
 	semSuiv = os.path.join(repertoire, semSuiv)
 
 	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
-	assert '02' in semSuiv # provi
-	assert 0, semSuiv
 	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	j3 = cartej3AsString[0:3]

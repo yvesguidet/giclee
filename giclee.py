@@ -145,8 +145,6 @@ for (increment, jour3lettres) in enumerate (jours):
 		print 'm = {}'.format(m)
 	if True:
 		print 'type(m) = {}'.format(type(m))
-	
-	assert 0, m
 
 	from njm import njm
 
