@@ -14,8 +14,8 @@ import os, glob
 
 import datetime
 
-def numSemCour():
-	return datetime.date.today().isocalendar()[1]
+def numSemCour(d = datetime.date.today()):
+	return d.isocalendar()[1]
 
 def annee2chiffres(d = datetime.date.today()):
 	return d.isocalendar()[0] - 2000
@@ -154,7 +154,8 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	import datetime
 	numSemSuiv =  n + 1
 	if n != 52:
-		semSuiv = 'Sem{}18.mm'.format(numSemSuiv)
+		semSuiv = 'Sem{:02d}18.mm'.format(numSemSuiv)
+		assert 0, semSuiv
 	else:
 		numSemSuiv = 1
 		semSuiv = 'Sem{:02d}19.mm'.format(numSemSuiv)
@@ -164,6 +165,8 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	semSuiv = os.path.join(repertoire, semSuiv)
 
 	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
+	assert '02' in semSuiv # provi
+	assert 0, semSuiv
 	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	j3 = cartej3AsString[0:3]
