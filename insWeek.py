@@ -124,7 +124,7 @@ def insWeek(c, d):
 
 	a = annee2chiffres()
 
-	semSuiv = 'Sem{}{}.mm'.format(nsc + 1, a)
+	semSuiv = 'Sem{:02d}{}.mm'.format(nsc + 1, a)
 
 	verrue.set('LINK', semSuiv)
 
