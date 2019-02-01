@@ -14,6 +14,14 @@ import os, glob
 
 import datetime
 
+def lanceXN():
+	''' lance XN*y'''
+
+	import os
+
+	k = 'cd /home/yves/2011/dev/Python/XCartes/XNextWeek; ./XNextWeek.py'
+	os.system(k)
+
 def numSemCour(d = datetime.date.today()):
 	return d.isocalendar()[1]
 
@@ -73,6 +81,7 @@ def veille(c, d):
 
 	x = os.path.join(d, hier + '*.mm')
 	l = glob.glob(x)
+	assert 0, l
 	assert len(l) == 1
 
 	return l[0]
@@ -145,7 +154,7 @@ from injJourSSuiv import injJourSSuiv
 
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
-	
+
 	# vendredi 1 février 2019, 09:07:55 (UTC+0100) affreux patch
 	if repertoire != '/home/yves/2011/dev/Python/outils/giclee/essai/':
 		repertoire = '/home/yves/2011/dev/Python/outils/giclee/essai'
@@ -168,6 +177,10 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	#	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
+	# vendredi 1 février 2019, 10:34:53 (UTC+0100)
+	lanceXN()
+	if not os.path.exists(semSuiv):
+		assert 0
 	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	j3 = cartej3AsString[0:3]
