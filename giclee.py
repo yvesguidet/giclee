@@ -24,9 +24,7 @@ oct = '_'	# mieux que '-' pour modif
 dirtest = 'essai'
 
 import shutil
-shutil.rmtree('essai', ignore_errors=True)
-
-os.mkdir(dirtest)
+#	shutil.rmtree('essai', ignore_errors=True)
 
 # on se déplace sur le répertoire essai
 # vendredi 20 octobre 2017, 09:11:55 (UTC+0200)
