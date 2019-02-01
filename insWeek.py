@@ -145,7 +145,11 @@ from injJourSSuiv import injJourSSuiv
 
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
-
+	
+	# vendredi 1 février 2019, 09:07:55 (UTC+0100) affreux patch
+	if repertoire != '/home/yves/2011/dev/Python/outils/giclee/essai/':
+		repertoire = '/home/yves/2011/dev/Python/outils/giclee/essai'
+	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
 	n = numSemCour()
 
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
@@ -159,10 +163,11 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	semSuiv = 'Sem{:02d}19.mm'.format(numSemSuiv)
 
 	import os
-
+	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
 	semSuiv = os.path.join(repertoire, semSuiv)
 
-	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
+	#	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
+	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
 	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	j3 = cartej3AsString[0:3]
