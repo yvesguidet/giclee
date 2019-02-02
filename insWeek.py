@@ -77,13 +77,37 @@ def veille(c, d):
 
 	if i == 0:
 		return	# lundi : later
+
+	print "veille : (c, trwa) = {}".format((c, trwa))
+
 	hier = jours[i - 1]
 
 	x = os.path.join(d, hier + '*.mm')
 	l = glob.glob(x)
-	assert 0, l
-	assert len(l) == 1
 
+	#	/media/home/yves/2011/dev/Python/outils/giclee/semaineSuivante.py
+	from sys import path
+
+	import semaineSuivante
+	d = semaineSuivante.lundiProchain()
+	d = str(d).split('-')
+	ac = d[0].replace('20', '')
+	s = d[1]
+#
+	n = numSemCour()
+#
+	zob = c.split('_')[1]
+	cHier = 'lun{:02d}_{}'.format(n, zob)
+	print "veille : cHier = {}".format(cHier)
+	assert 0, (cHier, zob)
+
+	assert '06' in cHier	#	provi
+
+	l = map(os.basename, l)
+
+	print "veille : l = {}".format(l)
+
+	assert len(l) == 1
 	return l[0]
 
 def insVeille(c, d):
