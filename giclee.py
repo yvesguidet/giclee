@@ -178,6 +178,18 @@ for (increment, jour3lettres) in enumerate (jours):
 	from glob import glob
 
 	ll = glob(jour3lettres + '*.mm')
+
+	print 'giclee.py : ll = {}'.format(ll)
+
+	##
+#	def veille(c, d):
+	from insWeek import veille
+
+
+	i = jours.index(jour3lettres)
+	if i == 0:
+		continue
+	
 	assert len(ll) == 1
 
 	insLend(ll[0], os.getcwd())
