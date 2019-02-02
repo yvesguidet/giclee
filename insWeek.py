@@ -96,14 +96,15 @@ def veille(c, d):
 #
 	n = numSemCour()
 #
-	zob = c.split('_')[1]
-	cHier = 'lun{:02d}_{}'.format(n, zob)
+	cHier = 'lun{}_{}'.format(n, c.split('_')[1])
 	print "veille : cHier = {}".format(cHier)
-	assert 0, (cHier, zob)
+	#	assert 0, cHier 
 
 	assert '06' in cHier	#	provi
+	return cHier
+	from os.path import basename
 
-	l = map(os.basename, l)
+	l = map(basename, l)
 
 	print "veille : l = {}".format(l)
 
