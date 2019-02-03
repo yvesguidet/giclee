@@ -143,8 +143,19 @@ from nodes import zoli
 
 from injJourSSuiv import injJourSSuiv
 
+def lanceXN():
+	''' lance XN*y'''
+
+	import os
+
+	k = 'cd /home/yves/2011/dev/Python/XCartes/XNextWeek; ./XNextWeek.py'
+	os.system(k)
+
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
+
+	assert not 'essais' in repertoire
+	assert 'essai' in repertoire
 
 	n = numSemCour()
 
@@ -162,8 +173,10 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 
 	semSuiv = os.path.join(repertoire, semSuiv)
 
-	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
-	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
+	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
+	#	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
+
+	lanceXN()
 
 	j3 = cartej3AsString[0:3]
 
