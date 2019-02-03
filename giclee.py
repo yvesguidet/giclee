@@ -24,7 +24,9 @@ oct = '_'	# mieux que '-' pour modif
 dirtest = 'essai'
 
 import shutil
-#	shutil.rmtree('essai', ignore_errors=True)
+shutil.rmtree('essai', ignore_errors=True)
+
+os.mkdir(dirtest)
 
 # on se déplace sur le répertoire essai
 # vendredi 20 octobre 2017, 09:11:55 (UTC+0200)
@@ -178,18 +180,6 @@ for (increment, jour3lettres) in enumerate (jours):
 	from glob import glob
 
 	ll = glob(jour3lettres + '*.mm')
-
-	print 'giclee.py : ll = {}'.format(ll)
-
-	##
-#	def veille(c, d):
-	from insWeek import veille
-
-
-	i = jours.index(jour3lettres)
-	if i == 0:
-		continue
-	
 	assert len(ll) == 1
 
 	insLend(ll[0], os.getcwd())

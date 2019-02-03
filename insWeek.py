@@ -14,14 +14,6 @@ import os, glob
 
 import datetime
 
-def lanceXN():
-	''' lance XN*y'''
-
-	import os
-
-	k = 'cd /home/yves/2011/dev/Python/XCartes/XNextWeek; ./XNextWeek.py'
-	os.system(k)
-
 def numSemCour(d = datetime.date.today()):
 	return d.isocalendar()[1]
 
@@ -77,38 +69,12 @@ def veille(c, d):
 
 	if i == 0:
 		return	# lundi : later
-
-	print "veille : (c, trwa) = {}".format((c, trwa))
-
 	hier = jours[i - 1]
 
 	x = os.path.join(d, hier + '*.mm')
 	l = glob.glob(x)
-
-	#	/media/home/yves/2011/dev/Python/outils/giclee/semaineSuivante.py
-	from sys import path
-
-	import semaineSuivante
-	d = semaineSuivante.lundiProchain()
-	d = str(d).split('-')
-	ac = d[0].replace('20', '')
-	s = d[1]
-#
-	n = numSemCour()
-#
-	cHier = 'lun{}_{}'.format(n, c.split('_')[1])
-	print "veille : cHier = {}".format(cHier)
-	#	assert 0, cHier 
-
-	assert '06' in cHier	#	provi
-	return cHier
-	from os.path import basename
-
-	l = map(basename, l)
-
-	print "veille : l = {}".format(l)
-
 	assert len(l) == 1
+
 	return l[0]
 
 def insVeille(c, d):
@@ -180,10 +146,6 @@ from injJourSSuiv import injJourSSuiv
 def majLienDsSuiv(cartej3AsString, repertoire):
 	''' màj lien sur cartej3AsString ds sem suiv (was lily) '''
 
-	# vendredi 1 février 2019, 09:07:55 (UTC+0100) affreux patch
-	if repertoire != '/home/yves/2011/dev/Python/outils/giclee/essai/':
-		repertoire = '/home/yves/2011/dev/Python/outils/giclee/essai'
-	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
 	n = numSemCour()
 
 	#	assert d == '/home/yves/2011/dev/Python/outils/mmNextWeek/essais/'
@@ -197,15 +159,10 @@ def majLienDsSuiv(cartej3AsString, repertoire):
 	semSuiv = 'Sem{:02d}19.mm'.format(numSemSuiv)
 
 	import os
-	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
+
 	semSuiv = os.path.join(repertoire, semSuiv)
 
-	#	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
-	assert repertoire == '/home/yves/2011/dev/Python/outils/giclee/essai'
-	# vendredi 1 février 2019, 10:34:53 (UTC+0100)
-	lanceXN()
-	if not os.path.exists(semSuiv):
-		assert 0
+	assert repertoire ==	'/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
 	assert os.path.exists(semSuiv), 'majLienDsSuiv : {} non trouvé (lancer XNextWeek ?)'.format(semSuiv)
 
 	j3 = cartej3AsString[0:3]
