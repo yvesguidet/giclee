@@ -160,7 +160,7 @@ for (increment, jour3lettres) in enumerate (jours):
 
 	carteACreer += '.mm'
 
-	d1 = '/home/yves/2011/dev/Python/XCartes/XNextWeek/essais/'
+	d1 = '/home/yves/2011/dev/Python/outils/giclee/essai'
 
 	majLienDsSuiv(carteACreer, d1)
 
@@ -180,7 +180,10 @@ for (increment, jour3lettres) in enumerate (jours):
 	from glob import glob
 
 	ll = glob(jour3lettres + '*.mm')
-	assert len(ll) == 1
+	#	assert len(ll) == 1
+	assert len(ll) != 0
+	if len(ll) > 2:
+		continue
 
 	insLend(ll[0], os.getcwd())
 
